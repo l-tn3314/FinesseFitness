@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -30,19 +31,21 @@ public class StartWorkoutActivity extends AppCompatActivity {
         if (buttonPressed != null) {
             this.buttonPressed = buttonPressed;
         }
-        System.out.println(this.buttonPressed);
         TextView workoutLevel = new TextView(this);
-        workoutLevel.setTextSize(20);
+        workoutLevel.setTextSize(25);
         workoutLevel.setText(this.buttonPressed);
+        workoutLevel.setId(R.id.workoutLevelId);
+        System.out.println(workoutLevel.getId());
 
         ViewGroup layout = (ViewGroup) findViewById(R.id.activity_start_workout);
         layout.addView(workoutLevel);
 
         // text for details (exercises) of workout
         TextView workoutDetails = new TextView(this);
-        workoutDetails.setTextSize(10);
+        workoutDetails.setTextSize(15);
         String[] exercises = Workouts.exercises;
         String workout = "";
+        String workoutCol2 = "";
         Random r = new Random();
         switch(this.buttonPressed) {
             case "Beginner":
@@ -64,11 +67,22 @@ public class StartWorkoutActivity extends AppCompatActivity {
                 workout += "10 min stretch";
                 break;
             case "Advanced":
+                boolean inWorkoutCol2 = false;
                 for (int i = 0; i < 20; i++) {
                     if (i % 5 == 0) {
-                        workout += "5 min jog\n";
+                        if (inWorkoutCol2) {
+                            workoutCol2 += "\t\t5 min jog\n";
+                        } else {
+                            workout += "5 min jog\n";
+                        }
+                        inWorkoutCol2 = !inWorkoutCol2;
                     }
-                    workout += "5 " + exercises[r.nextInt(exercises.length)] + "\n";
+                    if (inWorkoutCol2) {
+                        workoutCol2 += "\t\t5 " + exercises[r.nextInt(exercises.length)] + "\n";
+                    } else {
+                        workout += "5 " + exercises[r.nextInt(exercises.length)] + "\n";
+                    }
+                    inWorkoutCol2 = !inWorkoutCol2;
                 }
                 workout += "10 min stretch";
                 break;
@@ -76,7 +90,24 @@ public class StartWorkoutActivity extends AppCompatActivity {
                 break;
         }
         workoutDetails.setText(workout);
-        layout.addView(workoutDetails);
+        workoutDetails.setId(R.id.workoutLevelId + 1);
+        System.out.println(workoutDetails.getId());
+        RelativeLayout.LayoutParams params;
+        params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT);
+        params.addRule(RelativeLayout.BELOW, workoutLevel.getId());
+        layout.addView(workoutDetails, params);
+
+        TextView workoutDetails2 = new TextView(this);
+        workoutDetails2.setTextSize(15);
+        workoutDetails2.setText(workoutCol2);
+        System.out.println(workoutCol2);
+        RelativeLayout.LayoutParams params2;
+        params2 = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT);
+        params2.addRule(RelativeLayout.BELOW, workoutLevel.getId());
+        params2.addRule(RelativeLayout.RIGHT_OF, workoutDetails.getId());
+        layout.addView(workoutDetails2, params2);
 
         // back arrow
         getSupportActionBar().setHomeButtonEnabled(true);

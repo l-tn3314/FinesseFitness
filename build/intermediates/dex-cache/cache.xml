@@ -39,21 +39,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\tnl11\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
-        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.1_f148f82c7bb666f997d3b1b38bf29a7b5a895acd\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
         <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_6a9a2e12d6acc75e18c42deb93e1a47a3c186b5d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\tnl11\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.1_f148f82c7bb666f997d3b1b38bf29a7b5a895acd\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -88,7 +88,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="a0d5648ee8722f9a431bbcdee37a1fc409ec62da">
+        sha1="e8101b6920bcca0742a5090ab5791cd6668ee365">
         <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_b8cb2c13457df64101c4b5bdc6488358bcb2676d\classes.dex" />
     </item>
     <item
@@ -124,7 +124,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="33c8053f31e541bf0abcce7a3fd3e589d1a60f3e">
+        sha1="ae0758aa81d6d83588dcb433f352cd01c53d4248">
         <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_a0727fe40a5aba5e3844e1ee15c10628816a23aa\classes.dex" />
     </item>
     <item
