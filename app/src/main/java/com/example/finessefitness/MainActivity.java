@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+/*
+main screen - choosing level of difficulty for workout
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override

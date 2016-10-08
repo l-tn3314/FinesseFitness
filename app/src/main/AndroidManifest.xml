@@ -18,8 +18,15 @@
         <activity android:name=".StartWorkoutActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.finessefitness.MainActivity" >
+                android:value="com.example.finessefitness.MainActivity">
             </meta-data>
+        </activity>
+        <activity android:name=".WorkoutActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.finessefitness.StartWorkoutActivity">
+            </meta-data>
+
         </activity>
     </application>
 

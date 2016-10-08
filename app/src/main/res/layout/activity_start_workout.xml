@@ -14,10 +14,11 @@
         android:id="@+id/startButton"
         android:layout_width="match_parent"
         android:text="@string/button_start"
-        android:layout_marginBottom="70dp"
+        android:layout_marginBottom="50dp"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_height="70dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:onClick="workoutScreen" />
 </RelativeLayout>
