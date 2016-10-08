@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FinesseFitness</string>
+
+    <!-- main screen buttons -->
+    <string name="button_beginner">Beginner</string>
+    <string name="button_intermediate">Intermediate</string>
+    <string name="button_advanced">Advanced</string>
+
+    <!-- start button -->
+    <string name="button_start">Start Workout</string>
+</resources>
