@@ -1,5 +1,4 @@
-package com.example.ssai.myapplication;
-
+package com.example.finessefitness;
 
 import android.app.Activity;
 import android.content.pm.PackageManager;
@@ -7,6 +6,7 @@ import android.location.Location;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.AppCompatActivity;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -19,16 +19,18 @@ import com.google.android.gms.location.LocationSettingsResult;
 
 import java.text.DateFormat;
 import java.util.Date;
+import java.util.Timer;
+import java.util.TimerTask;
 
-public class FitnessModel extends Activity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener {
+public class FitnessModel extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener {
     private GoogleApiClient apiClient;
     private Location lastLocation;
-    protected Location currentLocation;
+    public Location currentLocation;
     private double latitude;
     private double longitutde;
     private LocationRequest locationRequest;
     protected Boolean requestingLocationUpdates;
-     //Time when the location was updated represented as a String
+    //Time when the location was updated represented as a String
     protected String lastUpdateTime;
 
     protected final static String REQUESTING_LOCATION_UPDATES_KEY = "requesting-location-updates-key";
@@ -47,12 +49,14 @@ public class FitnessModel extends Activity implements GoogleApiClient.Connection
             createLocationRequest();
         }
         requestingLocationUpdates = false;
-
         updateValuesFromBundle(savedInstanceState);
+
+        System.out.println("on create:" + this.currentLocation);
     }
 
 
     private void updateValuesFromBundle(Bundle savedInstanceState) {
+        System.out.println("saved instance " + savedInstanceState);
         if (savedInstanceState != null) {
             // Update the value of mRequestingLocationUpdates from the Bundle, and
             // make sure that the Start Updates and Stop Updates buttons are
@@ -65,11 +69,12 @@ public class FitnessModel extends Activity implements GoogleApiClient.Connection
             // Update the value of mCurrentLocation from the Bundle and update the
             // UI to show the correct latitude and longitude.
             if (savedInstanceState.keySet().contains(LOCATION_KEY)) {
+                System.out.println("if true");
                 // Since LOCATION_KEY was found in the Bundle, we can be sure that
                 // mCurrentLocationis not null.
                 currentLocation = savedInstanceState.getParcelable(LOCATION_KEY);
             }
-
+            System.out.println(this.currentLocation);
             // Update the value of mLastUpdateTime from the Bundle and update the UI.
             if (savedInstanceState.keySet().contains(LAST_UPDATED_TIME_STRING_KEY)) {
                 lastUpdateTime = savedInstanceState.getString(
@@ -98,6 +103,20 @@ public class FitnessModel extends Activity implements GoogleApiClient.Connection
 
     @Override
     public void onConnected(Bundle connectionHint) {
+        if(currentLocation == null) {
+            currentLocation = LocationServices.FusedLocationApi.getLastLocation(apiClient);
+        }
+        System.out.println("on connected " + currentLocation);
+        System.out.println(currentLocation.getLongitude());
+        System.out.println(currentLocation.getLatitude());
+        Timer timer = new Timer();
+        timer.scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                System.out.println("long " + currentLocation.getLongitude());
+                System.out.println("lat " + currentLocation.getLatitude());
+            }
+        }, 0, 1000);
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
             //    ActivityCompat#requestPermissions
