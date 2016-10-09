@@ -47,7 +47,6 @@ dependencies {
     compile 'com.spotify.sdk:spotify-player:beta23-noconnect-2.20b@aar'
     compile 'com.android.support:appcompat-v7:24.1.0'
 
-    //kaaes' dependency for spotify web android
     compile 'com.github.kaaes:spotify-web-api-android:0.4.1'
 
     testCompile 'junit:junit:4.12'

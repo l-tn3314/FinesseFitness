@@ -259,7 +259,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.0"
-        sha1="3f541ccee1487099e16eca27ad77d8de26f3a7a8">
+        sha1="59f599c79886cdb13e8428b899458168224cab28">
         <dex dex="/Users/Trang/HackUMass/FinesseFitness/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_67407e5b81e2dd7e9886a2e406ff230404a86a00/classes.dex" />
     </item>
     <item
@@ -336,12 +336,30 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/Trang/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3.1/ecb6e1f8e4b0e84c4b886c2f14a1500caf309757/gson-2.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
+        <dex dex="/Users/Trang/HackUMass/FinesseFitness/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.3.1_d11e6df870675eec3ec6e0546b16e50966f9b1aa/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/Trang/HackUMass/FinesseFitness/app/build/intermediates/exploded-aar/com.spotify.sdk/spotify-auth/beta23-noconnect-2.20b/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.0"
         sha1="eed3cdbe6aacd905b1b4a1c7abab345ad051e967">
         <dex dex="/Users/Trang/HackUMass/FinesseFitness/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.spotify.sdk-spotify-auth-beta23-noconnect-2.20b_7992fd67df62e515eb197b8e4bd7c1f4720596c0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Trang/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit/retrofit/1.9.0/a681c044244d9fc375198588297a39ba78028423/retrofit-1.9.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="a681c044244d9fc375198588297a39ba78028423">
+        <dex dex="/Users/Trang/HackUMass/FinesseFitness/app/build/intermediates/transforms/dex/debug/folders/1000/10/retrofit-1.9.0_8121949b56e15014ab0fb6f11bac59de086badec/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -480,6 +498,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/Trang/HackUMass/FinesseFitness/app/build/intermediates/exploded-aar/com.github.kaaes/spotify-web-api-android/0.4.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="785444f1c6a6b880b9aa0efb9a2464cb6c51f8dc">
+        <dex dex="/Users/Trang/HackUMass/FinesseFitness/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.github.kaaes-spotify-web-api-android-0.4.1_63b35da77ea8036d6f098d358bd5e3325c3ed8af/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/Trang/HackUMass/FinesseFitness/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.6.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -538,7 +565,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.0"
-        sha1="bfe91c8f9ad4e0a60d79fe7684f7b05809c7033e">
+        sha1="cc5e18ed08df36e6f283f80ec8af03adeb34d326">
         <dex dex="/Users/Trang/HackUMass/FinesseFitness/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_93936dc64965b5877d5d894e81918b38c1d37d31/classes.dex" />
     </item>
     <item

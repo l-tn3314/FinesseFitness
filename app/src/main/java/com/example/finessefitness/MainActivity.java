@@ -19,7 +19,6 @@ import com.spotify.sdk.android.player.PlayerEvent;
 import com.spotify.sdk.android.player.Spotify;
 import com.spotify.sdk.android.player.SpotifyPlayer;
 
-
 import android.widget.EditText;
 
 /*
@@ -39,13 +38,14 @@ public class MainActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //start logging on to spotify
         AuthenticationRequest.Builder builder = new AuthenticationRequest.Builder(CLIENT_ID,
                 AuthenticationResponse.Type.TOKEN,
                 REDIRECT_URI);
         builder.setScopes(new String[]{"user-read-private", "streaming"});
         AuthenticationRequest request = builder.build();
-
         AuthenticationClient.openLoginActivity(this, REQUEST_CODE, request);
+
     }
 
     /* called when the user selects a workout difficulty */
@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements
         startActivity(intent);
         //Intent intent = new Intent(this, FitnessModel.class);
         //startActivity(intent);
+
     }
 
     @Override
