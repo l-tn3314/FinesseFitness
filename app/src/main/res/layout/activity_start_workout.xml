@@ -15,11 +15,31 @@
         android:id="@+id/startButton"
         android:layout_width="match_parent"
         android:text="@string/button_start"
-        android:layout_marginBottom="18dp"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_height="70dp"
         android:onClick="workoutScreen"
+        android:layout_marginBottom="11dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <GridLayout
+        android:id="@+id/workoutTable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/workoutLevel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/workoutLevel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="27dp"
+        android:textColor="#FFFFFF"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>
