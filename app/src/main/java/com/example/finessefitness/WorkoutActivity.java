@@ -91,10 +91,10 @@ public class WorkoutActivity extends AppCompatActivity {
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
-            onPause();
+            //onPause();
             quit();
-            QuitDialog qd = new QuitDialog();
-            qd.onCreateDialog(this.bundle);
+            //QuitDialog qd = new QuitDialog();
+            //qd.onCreateDialog(this.bundle);
         }
         return super.onKeyDown(keyCode, event);
     }
