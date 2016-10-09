@@ -6,6 +6,7 @@ package hard_code;
 
 public class Workouts {
 
+
     public static String[] exercises = {"squats", "jumping jacks", "forward lunges",
             "side lunges", "high knees", "min walk","butt kicks", "frog jumps"};
 }
