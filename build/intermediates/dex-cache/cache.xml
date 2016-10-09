@@ -3,48 +3,12 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\9.6.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="c4394d46152165cd3256fb711ac94f66a28fbae1">
-        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wearable-9.6.1_0ce25a44fb7c8383a6a97c38ff438c1b8d2bf525\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
-        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.1_0b66d1da4f10a5937e34d00481184c663b3766fd\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
         <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_7e33eacaf8e65504db247d3911f1054a79f4a240\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.firebase\firebase-config\9.6.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="cf2c4e6607c77b0e671dc5ca252c5ea0d9c1ce0d">
-        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-config-9.6.1_9a3772f8b4b8b314c9b5d53b41da1e3fde47cf2c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-base\9.6.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="465f40f840e583f8b7421a3aacf3fbf08c28f00a">
-        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-base-9.6.1_8b5eb1e73bca911e121d84fea75147c57c7b8f56\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -81,51 +45,6 @@
         revision="24.0.3"
         sha1="af7582c6b327449c6d32518e6a10307860b7b5d6">
         <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-9.6.1_1c63949509c14d2bc7307e301e5b69295bb38d74\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\9.6.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="ff9be0a1e75a21c372735930d8987a55b5e6065f">
-        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-panorama-9.6.1_ab95685b11140a8ac7df9a3243abebc3565c9c12\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\9.6.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="a136366045678579300d161de97c2211c4c4f7a0">
-        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-cast-9.6.1_5e4cab5288fb655c014d5afeb3a8d5136e8ec202\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\9.6.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="a76a6983a23788b3689524d4bed763955afbd306">
-        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-fitness-9.6.1_f3d5333f6b2a9a4eeb43b1d614a3aa71cdcdd646\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\9.6.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="0cae6511c5705869cacf199f8abb0ea84cd10157">
-        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-vision-9.6.1_6b09d3f644ae356ee47443eda9e0e7bc98bd9922\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\9.6.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="8ebae43cd06058e99e08c8b4d305b72f2b9927c6">
-        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-plus-9.6.1_cec68f30fa425e7a9c1f7c0960eca580b1bd67ef\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -183,15 +102,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\tnl11\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
-        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.1_f148f82c7bb666f997d3b1b38bf29a7b5a895acd\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-iid\9.6.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -201,66 +111,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="867dad63c33388ff8c7644b236579355036d075f">
-        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_5a47611f5f68c6ecf8fc33d23ad31436d9f7ebb7\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics-impl\9.6.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="a53ac0560ab915a02c50d2e5c7b003381e6fb5e3">
         <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-analytics-impl-9.6.1_b25656b466c8bbd977c4e2be282010a683dc88a7\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.android.support\palette-v7\24.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
-        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-palette-v7-24.0.0_3f3843c4a1b7aaf30609efb6e4311624412acd81\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="64da6a5871d3752d4dffe61154c36d1cb0a18d35">
-        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_b8cb2c13457df64101c4b5bdc6488358bcb2676d\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\9.6.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="ac8365c87591065db07f7bac8551504504832cd4">
-        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-connection-9.6.1_2d482706d6fc6c598a15da2488443f9a2b9a136b\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database\9.6.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="b75ecdd04a37d31b4a0da2729fc5c558962a529b">
-        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-9.6.1_5c5589258062b58e92cc33fe343a42a2f178e0b1\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="238fe8b21b86e3fca6da6c2fc46c610b471281bd">
-        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_a0727fe40a5aba5e3844e1ee15c10628816a23aa\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -279,24 +135,6 @@
         revision="24.0.3"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
         <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.1_2ebd5d0f7dd9143aaea36efa9a4f5d262c5d2157\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.6.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="0efd1b44f47c134fb245914a1d54a55adbfc2f8d">
-        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-impl-9.6.1_81c9af2f36073d21795ab4b2828719b32b8eb505\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-awareness\9.6.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="90be14317e3f26d18438e8dbf8544500d1dfe07f">
-        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-awareness-9.6.1_5d24fb8c74c1f88c578ba135807a91fd3c3f9237\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -327,39 +165,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\9.6.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="dfcba20b85ef3669a8ced0a8760a6df281cbd7c7">
-        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wallet-9.6.1_2ca0fb72946db31c142920e52e4adf2f791ceda8\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
         <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_6a9a2e12d6acc75e18c42deb93e1a47a3c186b5d\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.6.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="4a36600281a648769411ef642c331851732bf29e">
-        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-9.6.1_bf6216f93f3b20414fd0814c378edfef3a915176\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.firebase\firebase-messaging\9.6.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="80dd8bea08bc5fe10b10a3243b8279c856ccc690">
-        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-messaging-9.6.1_f4eaf70368aca9340525454676120c06908bed38\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -378,15 +189,6 @@
         revision="24.0.3"
         sha1="47bbb3ec4b31ba71e125241c090dabe70cbb4de7">
         <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-ads-9.6.1_aecde6cce86a4da42b3e55d8843a7cd511ab53f0\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\9.6.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="f8db47be01cbe8cfa81e9cecce5ff1371ed1ad95">
-        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-drive-9.6.1_e015c7ffdaa4b2f618be51271170b03fe1dc531f\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -417,33 +219,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
-        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.1_a6f61973ad16696b6f7041a84d07648c74775eb8\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-common\9.6.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="77558e74bb2056ef38516296f13a27c4c4fc3e5c">
-        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-common-9.6.1_4c0f2f179d6be901c8b235ddac292934170d13f0\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-module\9.6.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="6ffe8b28ab61e5ee92ab9431a220379790c71ddf">
-        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-module-9.6.1_3062191f9f93382088be789d88fcd67775f7ae20\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-clearcut\9.6.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -468,6 +243,276 @@
         revision="24.0.3"
         sha1="9c0cf3d4f9d7d076f301e110b92e18ae23da12c2">
         <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-cast-framework-9.6.1_a0daf2251290430af23713bb304ac1f1d94a38e4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="2a18547ea91d258866d132c2a763185f15b01b25">
+        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-9.6.1_f0783de19ba2e4abd95ad2786b0f7638629ff19b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="518adc52081d41724932b41bc132e4d50a352b86">
+        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-identity-9.6.1_14ce3c5d4d04aa88fdd0441227f29f07507d69d4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="526f4b02f1771fa7607ff1b89fe2e9bd0344fee8">
+        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-analytics-9.6.1_a18a3e834377a8ea35a539d0cc0e4ed34804832e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_35955a8b051fd0720bf5e046108b3199ca64538a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\24.0.0\jars\libs\internal_impl-24.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
+        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.0.0_3d55932c7565e599d6f8dfbfaab98da98a5cc912\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="c4394d46152165cd3256fb711ac94f66a28fbae1">
+        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wearable-9.6.1_0ce25a44fb7c8383a6a97c38ff438c1b8d2bf525\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.1_0b66d1da4f10a5937e34d00481184c663b3766fd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.firebase\firebase-config\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="cf2c4e6607c77b0e671dc5ca252c5ea0d9c1ce0d">
+        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-config-9.6.1_9a3772f8b4b8b314c9b5d53b41da1e3fde47cf2c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-base\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="465f40f840e583f8b7421a3aacf3fbf08c28f00a">
+        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-base-9.6.1_8b5eb1e73bca911e121d84fea75147c57c7b8f56\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="ff9be0a1e75a21c372735930d8987a55b5e6065f">
+        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-panorama-9.6.1_ab95685b11140a8ac7df9a3243abebc3565c9c12\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="a136366045678579300d161de97c2211c4c4f7a0">
+        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-cast-9.6.1_5e4cab5288fb655c014d5afeb3a8d5136e8ec202\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="a76a6983a23788b3689524d4bed763955afbd306">
+        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-fitness-9.6.1_f3d5333f6b2a9a4eeb43b1d614a3aa71cdcdd646\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0cae6511c5705869cacf199f8abb0ea84cd10157">
+        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-vision-9.6.1_6b09d3f644ae356ee47443eda9e0e7bc98bd9922\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8ebae43cd06058e99e08c8b4d305b72f2b9927c6">
+        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-plus-9.6.1_cec68f30fa425e7a9c1f7c0960eca580b1bd67ef\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\tnl11\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.1_f148f82c7bb666f997d3b1b38bf29a7b5a895acd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_5a47611f5f68c6ecf8fc33d23ad31436d9f7ebb7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.android.support\palette-v7\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
+        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-palette-v7-24.0.0_3f3843c4a1b7aaf30609efb6e4311624412acd81\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0a83c60f5a3fa6579623ab18d2459dd8c92e6105">
+        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_b8cb2c13457df64101c4b5bdc6488358bcb2676d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="ac8365c87591065db07f7bac8551504504832cd4">
+        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-connection-9.6.1_2d482706d6fc6c598a15da2488443f9a2b9a136b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="b75ecdd04a37d31b4a0da2729fc5c558962a529b">
+        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-9.6.1_5c5589258062b58e92cc33fe343a42a2f178e0b1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="eabcbd2fe1566de2706b0ab1fd6c2b41700ed43c">
+        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_a0727fe40a5aba5e3844e1ee15c10628816a23aa\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0efd1b44f47c134fb245914a1d54a55adbfc2f8d">
+        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-impl-9.6.1_81c9af2f36073d21795ab4b2828719b32b8eb505\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-awareness\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="90be14317e3f26d18438e8dbf8544500d1dfe07f">
+        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-awareness-9.6.1_5d24fb8c74c1f88c578ba135807a91fd3c3f9237\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="dfcba20b85ef3669a8ced0a8760a6df281cbd7c7">
+        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wallet-9.6.1_2ca0fb72946db31c142920e52e4adf2f791ceda8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="4a36600281a648769411ef642c331851732bf29e">
+        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-9.6.1_bf6216f93f3b20414fd0814c378edfef3a915176\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.firebase\firebase-messaging\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="80dd8bea08bc5fe10b10a3243b8279c856ccc690">
+        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-messaging-9.6.1_f4eaf70368aca9340525454676120c06908bed38\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="f8db47be01cbe8cfa81e9cecce5ff1371ed1ad95">
+        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-drive-9.6.1_e015c7ffdaa4b2f618be51271170b03fe1dc531f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.1_a6f61973ad16696b6f7041a84d07648c74775eb8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-common\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="77558e74bb2056ef38516296f13a27c4c4fc3e5c">
+        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-common-9.6.1_4c0f2f179d6be901c8b235ddac292934170d13f0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-module\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="6ffe8b28ab61e5ee92ab9431a220379790c71ddf">
+        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-module-9.6.1_3062191f9f93382088be789d88fcd67775f7ae20\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -507,30 +552,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\9.6.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="2a18547ea91d258866d132c2a763185f15b01b25">
-        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-9.6.1_f0783de19ba2e4abd95ad2786b0f7638629ff19b\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.6.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="f0e96478ca3147bc588aadb9ae467d85b42473cc">
         <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tagmanager-api-9.6.1_8f917d73ca78e4f31256c846dc9eb1c74292a6aa\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\9.6.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="518adc52081d41724932b41bc132e4d50a352b86">
-        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-identity-9.6.1_14ce3c5d4d04aa88fdd0441227f29f07507d69d4\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -552,30 +579,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\9.6.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="526f4b02f1771fa7607ff1b89fe2e9bd0344fee8">
-        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-analytics-9.6.1_a18a3e834377a8ea35a539d0cc0e4ed34804832e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\9.6.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="0e0e0681c26a1f575d3e4c542182dd59bab75fd6">
         <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appinvite-9.6.1_a85a09db35ae19cae8363b51fe21370daa497fbe\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_35955a8b051fd0720bf5e046108b3199ca64538a\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -612,15 +621,6 @@
         revision="24.0.3"
         sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
         <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.1_d222bddf05a2a08319bf2157f5f7c30ba8a59220\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\24.0.0\jars\libs\internal_impl-24.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
-        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.0.0_3d55932c7565e599d6f8dfbfaab98da98a5cc912\classes.dex" />
     </item>
 
 </items>

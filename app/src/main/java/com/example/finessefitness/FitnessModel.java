@@ -113,8 +113,8 @@ public class FitnessModel extends AppCompatActivity implements GoogleApiClient.C
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
-                System.out.println("long " + currentLocation.getLongitude());
-                System.out.println("lat " + currentLocation.getLatitude());
+                System.out.println("long " + Location.convert(currentLocation.getLongitude(), Location.FORMAT_SECONDS));//currentLocation.getLongitude());
+                System.out.println("lat " + Location.convert(currentLocation.getLatitude(), Location.FORMAT_SECONDS));//currentLocation.getLatitude());
             }
         }, 0, 1000);
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {

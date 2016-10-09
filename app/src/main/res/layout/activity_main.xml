@@ -8,14 +8,14 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#5a0f9f"
+    android:background="#420776"
     tools:context="com.example.finessefitness.MainActivity">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Choose your workout:"
+        android:text="Choose your workout :"
         android:layout_marginTop="35dp"
         android:textColor="#FFFFFF"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
