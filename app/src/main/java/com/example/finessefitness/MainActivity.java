@@ -36,11 +36,11 @@ public class MainActivity extends AppCompatActivity {
 
     /* called when the user selects a workout difficulty */
     public void startWorkoutScreen(View view) {
-        /*Intent intent = new Intent(this, StartWorkoutActivity.class);
+        Intent intent = new Intent(this, StartWorkoutActivity.class);
         String buttonPressed = ((Button)view).getText().toString();
         intent.putExtra("button pressed", buttonPressed);
-        startActivity(intent);*/
-        Intent intent = new Intent(this, FitnessModel.class);
         startActivity(intent);
+        //Intent intent = new Intent(this, FitnessModel.class);
+        //startActivity(intent);
     }
 }

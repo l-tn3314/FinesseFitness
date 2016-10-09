@@ -11,17 +11,6 @@
     android:background="#5a0f9f"
     tools:context="com.example.finessefitness.MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Choose your workout:"
-        android:layout_marginTop="35dp"
-        android:textColor="#FFFFFF"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
 
     <!-- CHOOSE YOUR WORKOUT -->
 
@@ -67,4 +56,16 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         style="@android:style/Widget.Button" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose your workout:"
+        android:layout_marginTop="21dp"
+        android:textColor="#FFFFFF"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

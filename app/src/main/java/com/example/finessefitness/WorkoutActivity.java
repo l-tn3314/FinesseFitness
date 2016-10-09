@@ -14,7 +14,7 @@ import java.util.TimerTask;
 workout screen
  */
 public class WorkoutActivity extends AppCompatActivity {
-    private TextView timeRemaining;
+    private TextView seconds;
     private TextView activity;
     static int curInd;
 
@@ -25,7 +25,10 @@ public class WorkoutActivity extends AppCompatActivity {
 
         @Override
         public void onTick(long millisUntilFinished) {
-            timeRemaining.setText("seconds remaining: " + millisUntilFinished / 1000);
+            seconds.setText(Long.toString(millisUntilFinished / 1000));
+            if (seconds.getText().equals("1")) {
+                ((TextView) findViewById(R.id.timeRemaining)).setText("second remaining");
+            }
         }
          @Override
         public void onFinish() {
@@ -42,7 +45,7 @@ public class WorkoutActivity extends AppCompatActivity {
         System.out.println(StartWorkoutActivity.workoutExercises);
         System.out.println(StartWorkoutActivity.exerciseSeconds);
 
-        timeRemaining = (TextView) findViewById(R.id.timeRemaining);
+        seconds = (TextView) findViewById(R.id.seconds);
         activity = (TextView) findViewById(R.id.activity);
 
         curInd = 0;
@@ -59,6 +62,7 @@ public class WorkoutActivity extends AppCompatActivity {
     private void startNextTimer() {
         if (curInd < StartWorkoutActivity.workoutExercises.size()) {
             activity.setText(StartWorkoutActivity.workoutExercises.get(curInd));
+            ((TextView) findViewById(R.id.timeRemaining)).setText("seconds remaining");
             new ActivityCountDownTimer(StartWorkoutActivity.exerciseSeconds.get(curInd) * 1000, 1000).start();
         }
     }

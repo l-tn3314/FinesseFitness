@@ -7,5 +7,5 @@ package hard_code;
 public class Workouts {
     // array of all possible exercises
     public static String[] exercises = {"squats", "jumping jacks", "forward lunges",
-            "side lunges", "high knees", "butt kicks", "frog jumps", "single leg hamstring curl"};
+            "side lunges", "high knees", "butt kicks", "frog jumps", "single leg\n\thamstring curl"};
 }

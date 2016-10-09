@@ -50,8 +50,6 @@ public class StartWorkoutActivity extends AppCompatActivity {
 
         // text for details (exercises) of workout
         TextView workoutDetails = new TextView(this);
-        workoutDetails.setTextSize(17);
-        workoutDetails.setTextColor(Color.parseColor("#FFFFFF"));
         String[] exercises = Workouts.exercises; // array of all possible exercises
         String workoutCol1 = ""; // first column of exercises
         String workoutCol2 = ""; // second column of exercises
@@ -71,12 +69,12 @@ public class StartWorkoutActivity extends AppCompatActivity {
                     if (i % 5 == 0) {
                         workoutCol1 += "5 min jog\n";
                         workoutExercises.add("jog");
-                        exerciseSeconds.add(300);
+                        exerciseSeconds.add(3);
                     }
                     ind = r.nextInt(exercises.length);
-                    workoutCol1 += "5 " + exercises[ind] + "\n";
+                    timeExercise = r.nextInt(10) + 21;
+                    workoutCol1 += Integer.toString(timeExercise) + " sec " + exercises[ind] + "\n";
                     workoutExercises.add(exercises[ind]);
-                    timeExercise = r.nextInt(10 + 21);
                     exerciseSeconds.add(timeExercise);
                 }
                 workoutCol1 += "10 min stretch";
@@ -95,13 +93,13 @@ public class StartWorkoutActivity extends AppCompatActivity {
                         inWorkoutCol2 = !inWorkoutCol2;
                     }
                     ind = r.nextInt(exercises.length);
+                    timeExercise = r.nextInt(10) + 21;
                     if (inWorkoutCol2) {
-                        workoutCol2 += "\t\t5 " + exercises[ind] + "\n";
+                        workoutCol2 += "\t\t" + Integer.toString(timeExercise) + " sec " + exercises[ind] + "\n";
                     } else {
-                        workoutCol1 += "5 " + exercises[ind] + "\n";
+                        workoutCol1 += Integer.toString(timeExercise) + " sec " + exercises[ind] + "\n";
                     }
                     workoutExercises.add(exercises[ind]);
-                    timeExercise = r.nextInt(10 + 21);
                     exerciseSeconds.add(timeExercise);
                     inWorkoutCol2 = !inWorkoutCol2;
                 }
@@ -121,13 +119,13 @@ public class StartWorkoutActivity extends AppCompatActivity {
                         inWorkoutCol2 = !inWorkoutCol2;
                     }
                     ind = r.nextInt(exercises.length);
+                    timeExercise = r.nextInt(10) + 21;
                     if (inWorkoutCol2) {
-                        workoutCol2 += "\t\t5 " + exercises[ind] + "\n";
+                        workoutCol2 += "\t\t" + Integer.toString(timeExercise) + " sec " + exercises[ind] + "\n";
                     } else {
-                        workoutCol1 += "5 " + exercises[ind] + "\n";
+                        workoutCol1 += Integer.toString(timeExercise) + " sec " + exercises[ind] + "\n";
                     }
                     workoutExercises.add(exercises[ind]);
-                    timeExercise = r.nextInt(10 + 21);
                     exerciseSeconds.add(timeExercise);
                     inWorkoutCol2 = !inWorkoutCol2;
                 }
@@ -136,6 +134,8 @@ public class StartWorkoutActivity extends AppCompatActivity {
             default:
                 break;
         }
+        workoutDetails.setTextSize(17);
+        workoutDetails.setTextColor(Color.parseColor("#FFFFFF"));
         workoutDetails.setText(workoutCol1);
         workoutDetails.setId(R.id.workoutLevelId + 1);
         // place col 1 view below the workout level
@@ -146,7 +146,7 @@ public class StartWorkoutActivity extends AppCompatActivity {
         layout.addView(workoutDetails, params);
 
         TextView workoutDetails2 = new TextView(this);
-        workoutDetails2.setTextSize(15);
+        workoutDetails2.setTextSize(17);
         workoutDetails2.setText(workoutCol2);
         workoutDetails2.setTextColor(Color.parseColor("#FFFFFF"));
         // place col 2 view below the workout level and to the right of col 1
