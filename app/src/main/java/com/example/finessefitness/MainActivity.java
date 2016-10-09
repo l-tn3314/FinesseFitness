@@ -13,12 +13,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        System.out.println("main saved instance state: " + savedInstanceState);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //System.out.println(fm.currentLocation.getLatitude());
-        //System.out.println(fm.currentLocation.getLongitude());
 
         /*
         // setting button font
