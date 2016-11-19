@@ -1,1 +1,2 @@
 # FinesseFitness
+Are you sick and tired of doing the boring workout videos at home? Do you want some variety in your routine? FinesseFitness is an interactive workout app that motivates you to go outside and participate in assisted workout routines. There are three levels of work outs to choose from: beginning, intermediate, and advance. You can also link your Spotify music with FinesseFitness for the best workout you will ever experience in your life! 

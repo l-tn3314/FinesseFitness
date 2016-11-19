@@ -11,5 +11,7 @@
     <!-- start button -->
     <string name="button_start">Start Workout</string>
 
-    <string name="textField">field</string>
+    <string name="workoutLevel">Workout Level</string>
+    <string name="workoutTable">Workout Table</string>
+
 </resources>
