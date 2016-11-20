@@ -1,9 +1,11 @@
 package com.example.finessefitness;
 
 import android.content.Intent;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.app.Activity;
 import android.util.Log;
@@ -20,13 +22,20 @@ import com.spotify.sdk.android.player.Spotify;
 import com.spotify.sdk.android.player.SpotifyPlayer;
 
 import android.widget.EditText;
+import android.widget.ListView;
+
+import java.io.Console;
 
 /*
 main screen - choosing level of difficulty for workout
  */
-public class MainActivity extends AppCompatActivity implements
+public class MainActivity extends SidebarActivity implements
     SpotifyPlayer.NotificationCallback, ConnectionStateCallback
 {
+
+    private String[] dScreens;
+    private DrawerLayout dDrawerLayout;
+    private ListView dDrawerList;
 
     private static final String CLIENT_ID = "140a19672a304b67a9162f0713979c3a";
     private static final String REDIRECT_URI = "finesse-fitness-login://callback";
@@ -35,9 +44,12 @@ public class MainActivity extends AppCompatActivity implements
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        super.onCreate(savedInstanceState);
+        //System.out.println("===========================================================");
+
+        /*
         //start logging on to spotify
         AuthenticationRequest.Builder builder = new AuthenticationRequest.Builder(CLIENT_ID,
                 AuthenticationResponse.Type.TOKEN,
@@ -45,7 +57,23 @@ public class MainActivity extends AppCompatActivity implements
         builder.setScopes(new String[]{"user-read-private", "streaming"});
         AuthenticationRequest request = builder.build();
         AuthenticationClient.openLoginActivity(this, REQUEST_CODE, request);
+        */
 
+        /*// setup side bar
+        dScreens = getResources().getStringArray(R.array.nav_array);
+        //dDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        dDrawerList = (ListView) findViewById(R.id.left_drawer);
+        // set adapter
+        ArrayAdapter<String> arr = new ArrayAdapter<String>(this,
+                R.layout.drawer_list_item, dScreens);
+        System.out.println("Is this false: ");
+        System.out.println(dDrawerList != null);
+        System.out.println("Maghkybe?");
+        dDrawerList.setAdapter(new ArrayAdapter<String>(this,
+                R.layout.drawer_list_item, dScreens));
+        // set list click listener
+        //dDrawerList.setOnItemClickListener(new DrawerItemClickListener());
+   */
     }
 
     /* called when the user selects a workout difficulty */

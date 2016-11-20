@@ -2,6 +2,15 @@
     <color name="white">#FFFFFF</color>
 
     <string name="app_name">FinesseFitness</string>
+    <string name="menu">Menu</string>
+
+    <!-- navbar items -->
+    <string-array name="nav_array">
+        <item>Main</item>
+        <item>StartWorkout</item>
+    </string-array>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <!-- main screen buttons -->
     <string name="button_beginner">Beginner</string>
