@@ -42,13 +42,14 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     // This library handles authentication and authorization
-    compile 'com.spotify.sdk:spotify-auth:beta23-noconnect-2.20b@aar'
     // This library handles music playback
+    
+
+
+    compile 'com.spotify.sdk:spotify-auth:beta23-noconnect-2.20b@aar'
     compile 'com.spotify.sdk:spotify-player:beta23-noconnect-2.20b@aar'
-    compile 'com.android.support:appcompat-v7:24.1.0'
-
-    compile 'com.github.kaaes:spotify-web-api-android:0.4.1'
-
-    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.2.1'
     compile 'com.google.android.gms:play-services:9.6.1'
+    compile 'com.android.support:design:24.2.1'
+    testCompile 'junit:junit:4.12'
 }

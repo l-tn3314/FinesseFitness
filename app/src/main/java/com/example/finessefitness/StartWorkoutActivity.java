@@ -24,15 +24,15 @@ import hard_code.Workouts;
 /*
 Overview of workout before starting it
  */
-public class StartWorkoutActivity extends AppCompatActivity {
+public class StartWorkoutActivity extends SidebarActivity {
     protected static String buttonPressed;
     protected static ArrayList<String> workoutExercises;
     protected static ArrayList<Integer> exerciseSeconds;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_workout);
+        super.onCreate(savedInstanceState);
 
         // layout
         ViewGroup layout = (ViewGroup) findViewById(R.id.activity_start_workout);
@@ -173,7 +173,7 @@ public class StartWorkoutActivity extends AppCompatActivity {
         grid.addView(workoutDetails2);
 
         // back arrow
-        getSupportActionBar().setHomeButtonEnabled(true);
+       // getSupportActionBar().setHomeButtonEnabled(true);
     }
 
     /* called when the user starts a workout */

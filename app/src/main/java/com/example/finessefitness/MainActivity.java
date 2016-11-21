@@ -1,9 +1,11 @@
 package com.example.finessefitness;
 
 import android.content.Intent;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.app.Activity;
 import android.util.Log;
@@ -20,11 +22,14 @@ import com.spotify.sdk.android.player.Spotify;
 import com.spotify.sdk.android.player.SpotifyPlayer;
 
 import android.widget.EditText;
+import android.widget.ListView;
+
+import java.io.Console;
 
 /*
 main screen - choosing level of difficulty for workout
  */
-public class MainActivity extends AppCompatActivity implements
+public class MainActivity extends SidebarActivity implements
     SpotifyPlayer.NotificationCallback, ConnectionStateCallback
 {
 
@@ -35,9 +40,11 @@ public class MainActivity extends AppCompatActivity implements
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        super.onCreate(savedInstanceState);
+
+        /*
         //start logging on to spotify
         AuthenticationRequest.Builder builder = new AuthenticationRequest.Builder(CLIENT_ID,
                 AuthenticationResponse.Type.TOKEN,
@@ -45,19 +52,11 @@ public class MainActivity extends AppCompatActivity implements
         builder.setScopes(new String[]{"user-read-private", "streaming"});
         AuthenticationRequest request = builder.build();
         AuthenticationClient.openLoginActivity(this, REQUEST_CODE, request);
+        */
 
     }
 
-    /* called when the user selects a workout difficulty */
-    public void startWorkoutScreen(View view) {
-        Intent intent = new Intent(this, StartWorkoutActivity.class);
-        String buttonPressed = ((Button)view).getText().toString();
-        intent.putExtra("button pressed", buttonPressed);
-        startActivity(intent);
-        //Intent intent = new Intent(this, FitnessModel.class);
-        //startActivity(intent);
 
-    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {

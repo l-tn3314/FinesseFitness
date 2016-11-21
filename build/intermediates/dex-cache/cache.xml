@@ -291,6 +291,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="aee1fb70995ca7f39655f78fe15dd06d04c12995">
+        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_a0727fe40a5aba5e3844e1ee15c10628816a23aa\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-iid\9.6.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -315,15 +324,6 @@
         revision="24.0.0"
         sha1="734e80dffea7bd76c18ae256822a124c30d85850">
         <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-palette-v7-24.0.0_3f3843c4a1b7aaf30609efb6e4311624412acd81\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="99ba2de1a3dee8971bceea8383f091561e17ab1d">
-        <dex dex="C:\Users\tnl11\Documents\college\hack\FinesseFitness\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_a0727fe40a5aba5e3844e1ee15c10628816a23aa\classes.dex" />
     </item>
     <item
         is-multidex="true"
