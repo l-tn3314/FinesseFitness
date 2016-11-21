@@ -5,51 +5,60 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     android:background="#5a0f9f"
     tools:context="com.example.finessefitness.StartWorkoutActivity">
 
     <!-- main content -->
     <FrameLayout
-        android:id="@+id/activity_start_workout"
+        android:id="@+id/content_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/startButton"
-            android:layout_width="match_parent"
-            android:text="@string/button_start"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_height="70dp"
-            android:onClick="workoutScreen"
-            android:layout_marginBottom="11dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-        <GridLayout
-            android:id="@+id/workoutTable"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/workoutLevel"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true">
-        </GridLayout>
+            android:id="@+id/activity_start_workout"
 
-        <TextView
-            android:id="@+id/workoutLevel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="27dp"
-            android:textColor="#FFFFFF"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin">
+
+            <Button
+                android:id="@+id/startButton"
+                android:layout_width="match_parent"
+                android:text="@string/button_start"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_height="70dp"
+                android:onClick="workoutScreen"
+                android:layout_marginBottom="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <GridLayout
+                android:id="@+id/workoutTable"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/workoutLevel"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+            </GridLayout>
+
+            <TextView
+                android:id="@+id/workoutLevel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="27dp"
+                android:textColor="#FFFFFF"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
 
     </FrameLayout>
+
+
     <!-- sidebar -->
     <ListView
         android:id="@+id/left_drawer"
