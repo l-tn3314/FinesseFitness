@@ -1,5 +1,6 @@
 package com.example.finessefitness;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -8,16 +9,20 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Adapter;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class SidebarActivity extends AppCompatActivity {
+public abstract class SidebarActivity extends AppCompatActivity {
     private String[] screens;
     private DrawerLayout drawerLayout;
     private ListView drawerList;
     private ActionBarDrawerToggle drawerToggle;
 
 
+    // *** VERY IMPORTANT: setContentView should be called before
+    //                     this is invoked
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,7 +57,34 @@ public class SidebarActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
 
-        //drawerList.setOnItemClickListener(new DrawerItemClickListener());
+        drawerList.setOnItemClickListener(new DrawerItemClickListener());
+    }
+
+    private class DrawerItemClickListener implements ListView.OnItemClickListener {
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            selectItem(position);
+        }
+    }
+
+    // redirects based on position
+    private void selectItem(int position) {
+        String selection = screens[position];
+        Intent intent;
+        switch(selection) {
+            case "Dashboard":
+                intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
+                break;
+            case "Choose Workout":
+                intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
+                break;
+            case "Logout":
+                break;
+            default:
+                break;
+        }
     }
 
     @Override

@@ -47,8 +47,7 @@ public class MainActivity extends SidebarActivity implements
         setContentView(R.layout.activity_main);
 
         super.onCreate(savedInstanceState);
-        //System.out.println("===========================================================");
-
+        
         /*
         //start logging on to spotify
         AuthenticationRequest.Builder builder = new AuthenticationRequest.Builder(CLIENT_ID,
@@ -59,21 +58,6 @@ public class MainActivity extends SidebarActivity implements
         AuthenticationClient.openLoginActivity(this, REQUEST_CODE, request);
         */
 
-        /*// setup side bar
-        dScreens = getResources().getStringArray(R.array.nav_array);
-        //dDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        dDrawerList = (ListView) findViewById(R.id.left_drawer);
-        // set adapter
-        ArrayAdapter<String> arr = new ArrayAdapter<String>(this,
-                R.layout.drawer_list_item, dScreens);
-        System.out.println("Is this false: ");
-        System.out.println(dDrawerList != null);
-        System.out.println("Maghkybe?");
-        dDrawerList.setAdapter(new ArrayAdapter<String>(this,
-                R.layout.drawer_list_item, dScreens));
-        // set list click listener
-        //dDrawerList.setOnItemClickListener(new DrawerItemClickListener());
-   */
     }
 
     /* called when the user selects a workout difficulty */
@@ -82,9 +66,6 @@ public class MainActivity extends SidebarActivity implements
         String buttonPressed = ((Button)view).getText().toString();
         intent.putExtra("button pressed", buttonPressed);
         startActivity(intent);
-        //Intent intent = new Intent(this, FitnessModel.class);
-        //startActivity(intent);
-
     }
 
     @Override

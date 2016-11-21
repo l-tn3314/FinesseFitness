@@ -35,13 +35,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.finessefitness.StartWorkoutActivity"></meta-data>
         </activity>
-        <activity
-            android:name=".FitnessModel"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.finessefitness.FitnessModel"></meta-data>
-        </activity>
 
         <!-- Needed for LoginActivity to work -->
         <activity
