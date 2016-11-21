@@ -33,10 +33,6 @@ public class MainActivity extends SidebarActivity implements
     SpotifyPlayer.NotificationCallback, ConnectionStateCallback
 {
 
-    private String[] dScreens;
-    private DrawerLayout dDrawerLayout;
-    private ListView dDrawerList;
-
     private static final String CLIENT_ID = "140a19672a304b67a9162f0713979c3a";
     private static final String REDIRECT_URI = "finesse-fitness-login://callback";
     private Player mPlayer;
@@ -47,7 +43,7 @@ public class MainActivity extends SidebarActivity implements
         setContentView(R.layout.activity_main);
 
         super.onCreate(savedInstanceState);
-        
+
         /*
         //start logging on to spotify
         AuthenticationRequest.Builder builder = new AuthenticationRequest.Builder(CLIENT_ID,
@@ -60,13 +56,7 @@ public class MainActivity extends SidebarActivity implements
 
     }
 
-    /* called when the user selects a workout difficulty */
-    public void startWorkoutScreen(View view) {
-        Intent intent = new Intent(this, StartWorkoutActivity.class);
-        String buttonPressed = ((Button)view).getText().toString();
-        intent.putExtra("button pressed", buttonPressed);
-        startActivity(intent);
-    }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {

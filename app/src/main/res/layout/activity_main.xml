@@ -24,56 +24,11 @@
             android:paddingRight="@dimen/activity_horizontal_margin"
             android:paddingTop="@dimen/activity_vertical_margin">
 
-            <!-- CHOOSE YOUR WORKOUT -->
-
-            <!-- BEGINNER -->
-            <Button
-                android:id="@+id/beginnerButton"
-                android:layout_width="match_parent"
-                android:text="@string/button_beginner"
-                android:textSize="20sp"
-                android:layout_marginBottom="36dp"
-                android:onClick="startWorkoutScreen"
-                style="@android:style/Widget.Button"
-                android:layout_height="60dp"
-                android:layout_above="@+id/intermediateButton"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
-
-            <!-- INTERMEDIATE -->
-            <Button
-                android:id="@+id/intermediateButton"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:text="@string/button_intermediate"
-                android:textSize="20sp"
-                android:layout_marginBottom="36dp"
-                android:onClick="startWorkoutScreen"
-                style="@android:style/Widget.Button"
-                android:elevation="1dp"
-                android:layout_above="@+id/advancedButton"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
-
-            <!-- ADVANCED -->
-            <Button
-                android:id="@+id/advancedButton"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:text="@string/button_advanced"
-                android:textSize="20sp"
-                android:layout_marginBottom="55dp"
-                android:onClick="startWorkoutScreen"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                style="@android:style/Widget.Button" />
-
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Choose your workout:"
+                android:text="Dashboard"
                 android:layout_marginTop="21dp"
                 android:textColor="#FFFFFF"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"

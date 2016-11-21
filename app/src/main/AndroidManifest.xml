@@ -26,21 +26,23 @@
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.finessefitness.MainActivity"></meta-data>
+                android:value="com.example.finessefitness.MainActivity" />
         </activity>
         <activity
             android:name=".WorkoutActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.finessefitness.StartWorkoutActivity"></meta-data>
+                android:value="com.example.finessefitness.StartWorkoutActivity" />
         </activity>
 
         <!-- Needed for LoginActivity to work -->
         <activity
             android:name="com.spotify.sdk.android.authentication.LoginActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-        <activity android:name=".SidebarActivity"></activity>
+        <activity
+            android:name=".ChooseWorkoutActivity"
+            android:label="@string/title_activity_choose_workout"></activity>
     </application>
 
 </manifest>
