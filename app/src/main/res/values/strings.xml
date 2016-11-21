@@ -13,5 +13,7 @@
 
     <string name="workoutLevel">Workout Level</string>
     <string name="workoutTable">Workout Table</string>
+    <string name="join_finessefitness">Join FinesseFitness</string>
+    <string name="login">Login</string>
 
 </resources>
