@@ -74,6 +74,7 @@ public class DBHandler extends SQLiteOpenHelper {
     private static final String KEY_WK_CONTAINS = "workout_contains"; // Foriegn Key to Workout
     private static final String KEY_EXER_CONTAINS = "exercise_contains"; // Foriegn Key to Exercise
 
+
     // Constructors
     public static synchronized DBHandler getInstance(Context context) {
         if (sInstance == null) {
@@ -157,6 +158,7 @@ public class DBHandler extends SQLiteOpenHelper {
         this.onCreate(db);
     }
 
+
     public void addUser(User user) {
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -182,4 +184,5 @@ public class DBHandler extends SQLiteOpenHelper {
             db.endTransaction();
        // }
     }
+
 }

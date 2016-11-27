@@ -2,6 +2,16 @@
     <color name="white">#FFFFFF</color>
 
     <string name="app_name">FinesseFitness</string>
+    <string name="menu">Menu</string>
+
+    <!-- sidebar items -->
+    <string-array name="nav_array">
+        <item>Dashboard</item>
+        <item>Choose Workout</item>
+        <item>Logout</item>
+    </string-array>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <!-- main screen buttons -->
     <string name="button_beginner">Beginner</string>
@@ -17,5 +27,12 @@
     <string name="navigation_drawer_open" />
     <string name="navigation_drawer_close" />
     <string name="menu" />
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_choose_workout">Choose Workout</string>
+
+    <!-- login -->
+    <string name="join_finessefitness">Join FinesseFitness</string>
+    <string name="login">Login</string>
 
 </resources>
