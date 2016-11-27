@@ -54,9 +54,6 @@ public class MainActivity extends AppCompatActivity implements
         String buttonPressed = ((Button)view).getText().toString();
         intent.putExtra("button pressed", buttonPressed);
         startActivity(intent);
-        //Intent intent = new Intent(this, FitnessModel.class);
-        //startActivity(intent);
-
     }
 
     @Override
@@ -137,5 +134,12 @@ public class MainActivity extends AppCompatActivity implements
     @Override
     public void onConnectionMessage(String message) {
         Log.d("MainActivity", "Received connection message: " + message);
+    }
+
+    public void JoinUs(View view) {
+        Intent intent = new Intent(this, JoinActivity.class);
+        //String buttonPressed = ((Button)view).getText().toString();
+        //intent.putExtra("button pressed", buttonPressed);
+        startActivity(intent);
     }
 }

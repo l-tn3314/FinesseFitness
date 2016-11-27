@@ -13,5 +13,9 @@
 
     <string name="workoutLevel">Workout Level</string>
     <string name="workoutTable">Workout Table</string>
+    <string name="join_finessefitness" />
+    <string name="navigation_drawer_open" />
+    <string name="navigation_drawer_close" />
+    <string name="menu" />
 
 </resources>
