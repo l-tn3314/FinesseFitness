@@ -1,55 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.DrawerLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#5a0f9f"
+
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#72dfd2"
+
     tools:context="com.example.finessefitness.MainActivity">
 
     <!-- main content -->
-    <FrameLayout
-        android:id="@+id/content_frame"
+
+    <Button
+        android:id="@+id/join_button"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="60dp"
+        android:text="Join FinesseFitness"
+        android:textSize="20sp"
+        android:layout_marginBottom="35dp"
+        android:onClick="JoinUs"
+        style="@android:style/Widget.Button"
+        android:elevation="1dp"
+        android:layout_above="@+id/login_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
-        <RelativeLayout
-            android:id="@+id/activity_main"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-
-            android:paddingBottom="@dimen/activity_vertical_margin"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:paddingTop="@dimen/activity_vertical_margin">
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Dashboard"
-                android:layout_marginTop="21dp"
-                android:textColor="#FFFFFF"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:gravity="center"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true" />
-
-
-        </RelativeLayout>
-
-    </FrameLayout>
-
-    <!-- sidebar -->
-    <ListView
-        android:id="@+id/left_drawer"
-        android:layout_width="240dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:choiceMode="singleChoice"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="0dp"
-        android:background="#111">
-    </ListView>
-</android.support.v4.widget.DrawerLayout>
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Login"
+        android:textSize="20sp"
+        android:layout_marginBottom="61dp"
+        android:onClick=""
+        style="@android:style/Widget.Button"
+        android:elevation="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>

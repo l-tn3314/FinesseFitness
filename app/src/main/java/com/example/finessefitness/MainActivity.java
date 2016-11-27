@@ -56,7 +56,17 @@ public class MainActivity extends SidebarActivity implements
 
     }
 
+<<<<<<< HEAD
+    /* called when the user selects a workout difficulty */
+    public void startWorkoutScreen(View view) {
+        Intent intent = new Intent(this, StartWorkoutActivity.class);
+        String buttonPressed = ((Button)view).getText().toString();
+        intent.putExtra("button pressed", buttonPressed);
+        startActivity(intent);
+    }
+=======
 
+>>>>>>> master
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
@@ -136,5 +146,12 @@ public class MainActivity extends SidebarActivity implements
     @Override
     public void onConnectionMessage(String message) {
         Log.d("MainActivity", "Received connection message: " + message);
+    }
+
+    public void JoinUs(View view) {
+        Intent intent = new Intent(this, JoinActivity.class);
+        //String buttonPressed = ((Button)view).getText().toString();
+        //intent.putExtra("button pressed", buttonPressed);
+        startActivity(intent);
     }
 }
