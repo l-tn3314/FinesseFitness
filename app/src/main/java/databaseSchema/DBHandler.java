@@ -162,7 +162,7 @@ public class DBHandler extends SQLiteOpenHelper {
 
 
         db.beginTransaction();
-        //  try{
+          try{
         ContentValues values = new ContentValues();
         values.put(KEY_USERNAME, user.userName);
         values.put(KEY_FNAME, user.firstName);
@@ -176,10 +176,10 @@ public class DBHandler extends SQLiteOpenHelper {
         db.insert(TABLE_USER, null, values);
         db.setTransactionSuccessful();
 
-        //  } catch (Exception e) {
-        //    Log.d(TAG, "Error while trying to add user to database");
-        //  } finally {
+          } catch (Exception e) {
+            Log.d(TAG, "Error while trying to add user to database");
+          } finally {
         db.endTransaction();
-        // }
+         }
     }
 }

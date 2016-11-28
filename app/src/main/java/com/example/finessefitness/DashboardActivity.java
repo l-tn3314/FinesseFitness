@@ -40,7 +40,7 @@ public class DashboardActivity extends SidebarActivity implements
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_dashboard);
 
         super.onCreate(savedInstanceState);
 

@@ -1,6 +1,7 @@
 package com.example.finessefitness;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -50,5 +51,8 @@ public class JoinActivity extends AppCompatActivity {
         // Gets the instance from the database
         DBHandler db = DBHandler.getInstance(this);
         db.addUser(user);
+
+        Intent intent = new Intent(this, DashboardActivity.class);
+        startActivity(intent);
     }
 }
