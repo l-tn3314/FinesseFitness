@@ -2,11 +2,15 @@ package com.example.finessefitness;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
+
+import com.spotify.sdk.android.authentication.LoginActivity;
+
 import fitnessModel.User;
 
 import databaseSchema.DBHandler;
@@ -51,6 +55,13 @@ public class JoinActivity extends AppCompatActivity {
         // Gets the instance from the database
         DBHandler db = DBHandler.getInstance(this);
         db.addUser(user);
+
+        // sessions: add to SharedPreferences
+        SharedPreferences shared = getSharedPreferences(MainActivity.PREF_NAME, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = shared.edit();
+        editor.putString(MainActivity.USER, user.userName);
+        editor.putBoolean(MainActivity.IS_LOGGED_IN, true);
+        editor.commit();
 
         Intent intent = new Intent(this, DashboardActivity.class);
         startActivity(intent);
