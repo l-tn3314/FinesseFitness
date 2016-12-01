@@ -79,8 +79,8 @@ public class DashboardActivity extends SidebarActivity implements
 
     private void displayDashboard() {
         DBHandler handler = DBHandler.getInstance(this);
-        height.setText(handler.getHeightOf(username));
-        weight.setText(handler.getWeightOf(username));
+        height.setText(handler.userGetValOf(username, DBHandler.UserKey.HEIGHT));
+        weight.setText(handler.userGetValOf(username, DBHandler.UserKey.WEIGHT));
         user.setText(username);
     }
 

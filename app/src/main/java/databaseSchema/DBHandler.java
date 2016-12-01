@@ -36,6 +36,23 @@ public class DBHandler extends SQLiteOpenHelper {
     private static final String KEY_WEIGHT = "weight";
     private static final String KEY_HEIGHT = "height";
     private static final String KEY_DASHBOARD = "dashboard"; // Foreign Key to Dashboard
+    // enum to access the fields in the user table
+    public enum UserKey {
+        USERNAME(KEY_USERNAME), PASSWORD(KEY_PASSWORD), FIRST_NAME(KEY_FNAME), LAST_NAME(KEY_LNAME),
+        EMAIL(KEY_EMAIL), PHONE_NUMBER(KEY_PHONE_NUMBER), WEIGHT(KEY_WEIGHT), HEIGHT(KEY_HEIGHT),
+        DASHBOARD(KEY_DASHBOARD);
+
+        private String val;
+
+        UserKey(String val) {
+            this.val = val;
+        }
+
+        @Override
+        public String toString() {
+            return this.val;
+        }
+    }
 
     // Workout Table Name
     private static final String TABLE_WORKOUT = "workout";
@@ -51,7 +68,7 @@ public class DBHandler extends SQLiteOpenHelper {
     // Exercise Table Column Names
     private static final String KEY_EXER_ID = "exercise_id"; // Primary Key
     private static final String KEY_EXER_NAME = "exercise_name";
-    private static final String KEY_DESCRIPTION = "excercise_description";
+    private static final String KEY_DESCRIPTION = "exercise_description";
 
     // Dashboard Table Name
     private static final String TABLE_DASHBOARD = "dashboard";
@@ -60,6 +77,22 @@ public class DBHandler extends SQLiteOpenHelper {
     private static final String KEY_DASH_ID = "dashboard_id"; // Primary Key
     private static final String KEY_WK_GOAL = "work_goal";
     private static final String NUM_COMPLETED = "num_workouts_completed";
+    // enum to access the fields in the dashboard table
+    public enum DashboardKey {
+        USERNAME(KEY_DASH_ID), WORKOUT_GOAL(KEY_WK_GOAL), WORKOUTS_COMPLETED(KEY_WK_COMP);
+
+        private String val;
+
+        DashboardKey(String val) {
+            this.val = val;
+        }
+
+        @Override
+        public String toString() {
+            return this.val;
+        }
+    }
+
 
     // Completes Table Name
     private static final String TABLE_COMPLETES = "completes";
@@ -158,6 +191,9 @@ public class DBHandler extends SQLiteOpenHelper {
         this.onCreate(db);
     }
 
+    /*
+
+     */
     public void addUser(User user) {
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -184,9 +220,12 @@ public class DBHandler extends SQLiteOpenHelper {
          }
     }
 
-    public String getHeightOf(String username) {
+    /*
+    Gets the given field from the User table for the given username
+     */
+    public String userGetValOf(String username, UserKey key) {
         SQLiteDatabase db = this.getReadableDatabase();
-        String[] projection = {KEY_HEIGHT};
+        String[] projection = {key.toString()};
         String selection = KEY_USERNAME + " = ?";
         String[] selectionArgs = { username };
         Cursor c = db.query(
@@ -197,18 +236,21 @@ public class DBHandler extends SQLiteOpenHelper {
                 null,
                 null,
                 null
-                );
+        );
         c.moveToFirst();
         return c.getString(0);
     }
 
-    public String getWeightOf(String username) {
+    /*
+    Gets the given field from the Dashboard table for the given username
+     */
+    public String dashboardGetValOf(String username, DashboardKey key) {
         SQLiteDatabase db = this.getReadableDatabase();
-        String[] projection = {KEY_WEIGHT};
-        String selection = KEY_USERNAME + " = ?";
+        String[] projection = {key.toString()};
+        String selection = KEY_DASH_ID + " = ?";
         String[] selectionArgs = { username };
         Cursor c = db.query(
-                TABLE_USER,
+                TABLE_DASHBOARD,
                 projection,
                 selection,
                 selectionArgs,
