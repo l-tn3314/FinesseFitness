@@ -1,6 +1,9 @@
 package com.example.finessefitness;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -23,8 +26,11 @@ import com.spotify.sdk.android.player.SpotifyPlayer;
 
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.io.Console;
+
+import databaseSchema.DBHandler;
 
 /*
 main screen - choosing level of difficulty for workout
@@ -32,6 +38,13 @@ main screen - choosing level of difficulty for workout
 public class DashboardActivity extends SidebarActivity implements
         SpotifyPlayer.NotificationCallback, ConnectionStateCallback
 {
+
+    private TextView height;
+    private TextView weight;
+    private TextView user;
+
+    private SharedPreferences shared;
+    private String username; // current user
 
     private static final String CLIENT_ID = "140a19672a304b67a9162f0713979c3a";
     private static final String REDIRECT_URI = "finesse-fitness-login://callback";
@@ -44,6 +57,14 @@ public class DashboardActivity extends SidebarActivity implements
 
         super.onCreate(savedInstanceState);
 
+        shared = getSharedPreferences(MainActivity.PREF_NAME, Context.MODE_PRIVATE);
+        username = shared.getString(MainActivity.USER, "");
+
+        height = (TextView) findViewById(R.id.height);
+        weight = (TextView) findViewById(R.id.weight);
+        user = (TextView) findViewById(R.id.textView13);
+
+        displayDashboard();
         /*
         //start logging on to spotify
         AuthenticationRequest.Builder builder = new AuthenticationRequest.Builder(CLIENT_ID,
@@ -56,7 +77,12 @@ public class DashboardActivity extends SidebarActivity implements
 
     }
 
-
+    private void displayDashboard() {
+        DBHandler handler = DBHandler.getInstance(this);
+        height.setText(handler.userGetValOf(username, DBHandler.UserKey.HEIGHT));
+        weight.setText(handler.userGetValOf(username, DBHandler.UserKey.WEIGHT));
+        user.setText(username);
+    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
