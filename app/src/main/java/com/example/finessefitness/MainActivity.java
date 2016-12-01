@@ -1,6 +1,8 @@
 package com.example.finessefitness;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -26,10 +28,20 @@ main screen - choosing level of difficulty for workout
  */
 public class MainActivity extends AppCompatActivity {
 
+    public static final String PREF_NAME = "MyPrefs";
+    public static final String USER = "user";
+    public static final String IS_LOGGED_IN = "isLoggedIn";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        SharedPreferences shared = getSharedPreferences(MainActivity.PREF_NAME, Context.MODE_PRIVATE);
+        if (shared.getBoolean(IS_LOGGED_IN, false)) {
+            Intent intent = new Intent(this, DashboardActivity.class);
+            startActivity(intent);
+        }
     }
 
     /* called when the user selects a workout difficulty */

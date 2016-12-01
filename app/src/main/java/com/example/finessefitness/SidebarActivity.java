@@ -1,6 +1,8 @@
 package com.example.finessefitness;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -73,7 +75,7 @@ public abstract class SidebarActivity extends AppCompatActivity {
         Intent intent;
         switch(selection) {
             case "Dashboard":
-                intent = new Intent(this, MainActivity.class);
+                intent = new Intent(this, DashboardActivity.class);
                 startActivity(intent);
                 break;
             case "Choose Workout":
@@ -81,6 +83,12 @@ public abstract class SidebarActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case "Logout":
+                SharedPreferences shared = getSharedPreferences(MainActivity.PREF_NAME, Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = shared.edit();
+                editor.clear();
+                editor.commit();
+                intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
                 break;
             default:
                 break;
