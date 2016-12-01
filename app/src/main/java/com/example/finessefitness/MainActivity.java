@@ -55,8 +55,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void JoinUs(View view) {
         Intent intent = new Intent(this, JoinActivity.class);
-        //String buttonPressed = ((Button)view).getText().toString();
-        //intent.putExtra("button pressed", buttonPressed);
+        startActivity(intent);
+    }
+
+    public void Return(View view) {
+        Intent intent = new Intent(this, ReturnActivity.class);
         startActivity(intent);
     }
 }

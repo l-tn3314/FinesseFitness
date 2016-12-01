@@ -3,9 +3,13 @@ package databaseSchema;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import fitnessModel.User;
 
@@ -182,4 +186,28 @@ public class DBHandler extends SQLiteOpenHelper {
         db.endTransaction();
          }
     }
+
+    public boolean checkInfo(String username, String password) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor resultset = db.rawQuery("SELECT " + KEY_USERNAME + " FROM " + TABLE_USER,
+                null);
+        List<String> usernames = new ArrayList<String>();
+        while(resultset.moveToNext()) {
+            String addition = resultset.getString(resultset.getColumnIndex(KEY_USERNAME));
+            usernames.add(addition);
+
+        }
+        Cursor rspass;
+        if (usernames.contains(username)) {
+            rspass = db.rawQuery("SELECT " + KEY_PASSWORD + " FROM " + TABLE_USER + " WHERE "
+                    + KEY_USERNAME + " = " + username, null);
+            return rspass.getString(1).equals(password);
+        }
+
+        else {
+            return false;
+        }
+    }
+
+
 }

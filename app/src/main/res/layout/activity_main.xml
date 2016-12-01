@@ -33,7 +33,7 @@
         android:text="Login"
         android:textSize="20sp"
         android:layout_marginBottom="61dp"
-        android:onClick=""
+        android:onClick="Return"
         style="@android:style/Widget.Button"
         android:elevation="1dp"
         android:layout_alignParentBottom="true"
