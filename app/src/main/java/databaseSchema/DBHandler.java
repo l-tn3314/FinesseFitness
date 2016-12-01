@@ -3,6 +3,7 @@ package databaseSchema;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
@@ -181,5 +182,41 @@ public class DBHandler extends SQLiteOpenHelper {
           } finally {
         db.endTransaction();
          }
+    }
+
+    public String getHeightOf(String username) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String[] projection = {KEY_HEIGHT};
+        String selection = KEY_USERNAME + " = ?";
+        String[] selectionArgs = { username };
+        Cursor c = db.query(
+                TABLE_USER,
+                projection,
+                selection,
+                selectionArgs,
+                null,
+                null,
+                null
+                );
+        c.moveToFirst();
+        return c.getString(0);
+    }
+
+    public String getWeightOf(String username) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String[] projection = {KEY_WEIGHT};
+        String selection = KEY_USERNAME + " = ?";
+        String[] selectionArgs = { username };
+        Cursor c = db.query(
+                TABLE_USER,
+                projection,
+                selection,
+                selectionArgs,
+                null,
+                null,
+                null
+        );
+        c.moveToFirst();
+        return c.getString(0);
     }
 }
