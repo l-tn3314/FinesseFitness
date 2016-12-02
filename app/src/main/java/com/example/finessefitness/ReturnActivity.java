@@ -33,8 +33,11 @@ public class ReturnActivity extends AppCompatActivity {
             startActivity(intent);
         }
         else {
-            Intent intent = new Intent(this, ReturnActivity.class);
-            startActivity(intent);
+            eUserName.requestFocus();
+            eUserName.setError("Invalid Username!");
+
+            ePassword.requestFocus();
+            ePassword.setError("Invalid Password!");
         }
     }
 }
