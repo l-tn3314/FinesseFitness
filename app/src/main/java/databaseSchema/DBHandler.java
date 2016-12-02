@@ -233,13 +233,9 @@ public class DBHandler extends SQLiteOpenHelper {
             usernames.add(addition);
 
         }
-        Cursor rspass;
         if (usernames.contains(username)) {
-            rspass = db.rawQuery("SELECT " + KEY_PASSWORD + " FROM " + TABLE_USER + " WHERE "
-                    + KEY_USERNAME + " = " + username, null);
-            return rspass.getString(1).equals(password);
+            return userGetValOf(username, UserKey.PASSWORD).equals(password);
         }
-
         else {
             return false;
         }
