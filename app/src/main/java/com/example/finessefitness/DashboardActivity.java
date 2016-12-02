@@ -39,8 +39,8 @@ public class DashboardActivity extends SidebarActivity implements
         SpotifyPlayer.NotificationCallback, ConnectionStateCallback
 {
 
-    private TextView height;
-    private TextView weight;
+    private TextView goal;
+    private TextView workouts_completed;
     private TextView user;
 
     private SharedPreferences shared;
@@ -60,8 +60,8 @@ public class DashboardActivity extends SidebarActivity implements
         shared = getSharedPreferences(MainActivity.PREF_NAME, Context.MODE_PRIVATE);
         username = shared.getString(MainActivity.USER, "");
 
-        height = (TextView) findViewById(R.id.height);
-        weight = (TextView) findViewById(R.id.weight);
+        goal = (TextView) findViewById(R.id.goal);
+        workouts_completed = (TextView) findViewById(R.id.workouts_completed);
         user = (TextView) findViewById(R.id.textView13);
 
         displayDashboard();
@@ -79,8 +79,8 @@ public class DashboardActivity extends SidebarActivity implements
 
     private void displayDashboard() {
         DBHandler handler = DBHandler.getInstance(this);
-        height.setText(handler.userGetValOf(username, DBHandler.UserKey.HEIGHT));
-        weight.setText(handler.userGetValOf(username, DBHandler.UserKey.WEIGHT));
+        goal.setText(handler.dashboardGetValOf(username, DBHandler.DashboardKey.WORKOUT_GOAL));
+        workouts_completed.setText(handler.dashboardGetValOf(username, DBHandler.DashboardKey.WORKOUTS_COMPLETED));
         user.setText(username);
     }
 
