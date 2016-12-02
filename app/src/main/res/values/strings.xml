@@ -13,7 +13,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <!-- main screen buttons -->
+    <!-- choose workout screen buttons -->
     <string name="button_beginner">Beginner</string>
     <string name="button_intermediate">Intermediate</string>
     <string name="button_advanced">Advanced</string>
@@ -31,4 +31,7 @@
     <string name="join_finessefitness">Join FinesseFitness</string>
     <string name="login">Login</string>
 
+    <!-- dashboard -->
+    <string name="dashboard_goal"><i>Goal: </i></string>
+    <string name="dashboard_workouts_completed"><i>Workouts Completed: </i></string>
 </resources>
