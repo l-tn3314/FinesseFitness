@@ -82,6 +82,10 @@ public abstract class SidebarActivity extends AppCompatActivity {
                 intent = new Intent(this, ChooseWorkoutActivity.class);
                 startActivity(intent);
                 break;
+            case "Edit Profile":
+                intent = new Intent(this, ProfileActivity.class);
+                startActivity(intent);
+                break;
             case "Logout":
                 SharedPreferences shared = getSharedPreferences(MainActivity.PREF_NAME, Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = shared.edit();
