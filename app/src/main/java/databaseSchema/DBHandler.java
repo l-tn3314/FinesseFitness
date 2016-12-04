@@ -6,12 +6,18 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
+import com.example.finessefitness.MainActivity;
+import com.example.finessefitness.R;
+
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import fitnessModel.User;
+import hard_code.Workouts;
 
 import static android.content.ContentValues.TAG;
 
@@ -63,8 +69,9 @@ public class DBHandler extends SQLiteOpenHelper {
 
     // Workout Table Column Names
     private static final String KEY_WK_ID = "workout_id"; // Primary Key
-    private static final String KEY_INTENSITY = "intensity";
+    private static final String KEY_WK_NAME = "workout_name";
     private static final String KEY_CALORIES_BURNED = "calories_burned";
+    private static final String KEY_USER_CREATED = "user_created";
 
     // Exercise Table Name
     private static final String TABLE_EXERCISE = "exercise";
@@ -82,6 +89,7 @@ public class DBHandler extends SQLiteOpenHelper {
     private static final String KEY_DASH_ID = "dashboard_id"; // Primary Key
     private static final String KEY_WK_GOAL = "work_goal";
     private static final String KEY_NUM_COMPLETED = "num_workouts_completed";
+
     // enum to access the fields in the dashboard table
     public enum DashboardKey {
         USERNAME(KEY_DASH_ID), WORKOUT_GOAL(KEY_WK_GOAL), WORKOUTS_COMPLETED(KEY_NUM_COMPLETED);
@@ -146,9 +154,10 @@ public class DBHandler extends SQLiteOpenHelper {
 
         // Creates the table for the Workout entity
         String CREATE_WORKOUT_TABLE = "CREATE TABLE " + TABLE_WORKOUT + "(" +
-                KEY_WK_ID + " INT PRIMARY KEY, " + KEY_INTENSITY +
-                " VARCHAR, " +
-                KEY_CALORIES_BURNED + " INT" + ")";
+                KEY_WK_ID + " INT PRIMARY KEY, " + KEY_WK_NAME + " VARCHAR, " +
+                KEY_CALORIES_BURNED + " INT, " +  KEY_USER_CREATED + " VARCHAR NOT NULL, " +
+                "FOREIGN KEY (" + KEY_USER_CREATED + ") REFERENCES " +
+        TABLE_USER + "(" + KEY_USERNAME + ") );";
 
         // Create the table for the Exercise entity
         String CREATE_EXERCISE_TABLE = "CREATE TABLE " + TABLE_EXERCISE + "(" +
@@ -246,6 +255,296 @@ public class DBHandler extends SQLiteOpenHelper {
         }
     }
 
+    /** Add prexisting exercises to the table  */
+    public void addExercises() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        String[] exercises = {"Squats", "Jumping Jacks", "Forward Lunges",
+                "Side Lunges", "High Knees", "Butt Kicks", "Frog Jumps",
+                "Burpee Tuck Jumps", "Power Skip", "Squat Leg Raises",
+        "Ab Crunches", "Bicycle", "Plank", "Wall Sit", "Standing Calf Raises",
+                "Alternating Drop Lunges", "Burpee Squats", "Hip Lift Progression",
+                "Sumo Squat", "Fast Feet Shuffle", "Long Jump With Jog", "Jumping Lunges",
+        "Leg Raises", "Touch the Sky", "Calf Stretch", "Runner Stretch", "Forward Hang",
+        "Cobra", "Seat Back Twist", "Toe-Touch", "Bicep Curls", "Dumbbell Squats",
+                "Side Raises", "Shoulder Press", "Pushups", "Lateral Raises"};
+        String description = ""+R.raw.example;
+        for (int i = 0; i < exercises.length; i++) {
+            ContentValues values = new ContentValues();
+            values.put(KEY_EXER_ID, i);
+            values.put(KEY_EXER_NAME, exercises[i]);
+            values.put(KEY_DESCRIPTION, description);
+            db.insert(TABLE_EXERCISE, null, values);
+        }
+    }
+
+    /** Add workouts to the database */
+    public void addWorkouts() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        AppCompatActivity act = new MainActivity();
+        String[] workouts = act.getResources().getStringArray(R.array.workout_array);
+        ContentValues cv = new ContentValues();
+        cv.put(KEY_WK_ID, 0);
+        cv.put(KEY_WK_NAME, workouts[0]);
+        cv.put(KEY_CALORIES_BURNED, 500);
+        cv.put(KEY_USER_CREATED, "FinesseFitness");
+        db.insert(TABLE_WORKOUT, null, cv);
+
+        ContentValues cv1 = new ContentValues();
+        cv1.put(KEY_WK_ID, 1);
+        cv1.put(KEY_WK_NAME, workouts[1]);
+        cv1.put(KEY_CALORIES_BURNED, 400);
+        cv1.put(KEY_USER_CREATED, "FinesseFitness");
+        db.insert(TABLE_WORKOUT, null, cv1);
+
+        ContentValues cv2 = new ContentValues();
+        cv2.put(KEY_WK_ID, 2);
+        cv2.put(KEY_WK_NAME, workouts[2]);
+        cv2.put(KEY_CALORIES_BURNED, 550);
+        cv2.put(KEY_USER_CREATED, "FinesseFitness");
+        db.insert(TABLE_WORKOUT, null, cv2);
+
+        ContentValues cv3 = new ContentValues();
+        cv3.put(KEY_WK_ID, 3);
+        cv3.put(KEY_WK_NAME, workouts[3]);
+        cv3.put(KEY_CALORIES_BURNED, 320);
+        cv3.put(KEY_USER_CREATED, "FinesseFitness");
+        db.insert(TABLE_WORKOUT, null, cv3);
+
+        ContentValues cv4 = new ContentValues();
+        cv4.put(KEY_WK_ID, 4);
+        cv4.put(KEY_WK_NAME, workouts[4]);
+        cv4.put(KEY_CALORIES_BURNED, 320);
+        cv4.put(KEY_USER_CREATED, "FinesseFitness");
+        db.insert(TABLE_WORKOUT, null, cv4);
+
+        ContentValues cv5 = new ContentValues();
+        cv5.put(KEY_WK_ID, 5);
+        cv5.put(KEY_WK_NAME, workouts[5]);
+        cv5.put(KEY_CALORIES_BURNED, 400);
+        cv5.put(KEY_USER_CREATED, "FinesseFitness");
+        db.insert(TABLE_WORKOUT, null, cv5);
+    }
+
+    /** Add values to the Exercise/ Workout Relation Table */
+    public void addContains() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        AppCompatActivity act = new MainActivity();
+        String[] workouts = act.getResources().getStringArray(R.array.workout_array);
+        String[] exercises = act.getResources().getStringArray(R.array.default_exercise_array);
+        List<String> exerciseList = Arrays.asList(exercises);
+        ContentValues c0 = new ContentValues();
+        c0.put(KEY_WK_CONTAINS, 0);
+        c0.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Squats"));
+        db.insert(TABLE_CONTAINS, null, c0);
+
+        ContentValues c1 = new ContentValues();
+        c1.put(KEY_WK_CONTAINS, 0);
+        c1.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Forward Lunges"));
+        db.insert(TABLE_CONTAINS, null, c1);
+
+        ContentValues c2 = new ContentValues();
+        c2.put(KEY_WK_CONTAINS, 0);
+        c2.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Burpee Tuck Jump"));
+        db.insert(TABLE_CONTAINS, null, c2);
+
+        ContentValues c3 = new ContentValues();
+        c3.put(KEY_WK_CONTAINS, 0);
+        c3.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Power Skip"));
+        db.insert(TABLE_CONTAINS, null, c3);
+
+        ContentValues c4 = new ContentValues();
+        c4.put(KEY_WK_CONTAINS, 0);
+        c4.put(KEY_EXER_CONTAINS, exerciseList.indexOf("High Knees"));
+        db.insert(TABLE_CONTAINS, null, c4);
+
+        ContentValues c5 = new ContentValues();
+        c5.put(KEY_WK_CONTAINS, 0);
+        c5.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Butt Kicks"));
+        db.insert(TABLE_CONTAINS, null, c5);
+
+        ContentValues c6 = new ContentValues();
+        c6.put(KEY_WK_CONTAINS, 0);
+        c6.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Squat Leg Raises"));
+        db.insert(TABLE_CONTAINS, null, c6);
+
+        ContentValues c7 = new ContentValues();
+        c7.put(KEY_WK_CONTAINS, 0);
+        c7.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Standing Calf Raises"));
+        db.insert(TABLE_CONTAINS, null, c7);
+
+        ContentValues c8 = new ContentValues();
+        c8.put(KEY_WK_CONTAINS, 0);
+        c8.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Alternating Drop Lunges"));
+        db.insert(TABLE_CONTAINS, null, c8);
+
+        ContentValues c9 = new ContentValues();
+        c9.put(KEY_WK_CONTAINS, 1);
+        c9.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Butt Kicks"));
+        db.insert(TABLE_CONTAINS, null, c9);
+
+        ContentValues c10 = new ContentValues();
+        c10.put(KEY_WK_CONTAINS, 1);
+        c10.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Wall Sit"));
+        db.insert(TABLE_CONTAINS, null, c10);
+
+        ContentValues c11 = new ContentValues();
+        c11.put(KEY_WK_CONTAINS, 1);
+        c11.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Burpee Squat"));
+        db.insert(TABLE_CONTAINS, null, c11);
+
+        ContentValues c12 = new ContentValues();
+        c12.put(KEY_WK_CONTAINS, 1);
+        c12.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Squats"));
+        db.insert(TABLE_CONTAINS, null, c12);
+
+        ContentValues c13 = new ContentValues();
+        c13.put(KEY_WK_CONTAINS, 1);
+        c13.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Hip-Lift Progression"));
+        db.insert(TABLE_CONTAINS, null, c13);
+
+        ContentValues c14 = new ContentValues();
+        c14.put(KEY_WK_CONTAINS, 1);
+        c14.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Squat Leg Raises"));
+        db.insert(TABLE_CONTAINS, null, c14);
+
+        ContentValues c15 = new ContentValues();
+        c15.put(KEY_WK_CONTAINS, 1);
+        c15.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Sumo Squat"));
+        db.insert(TABLE_CONTAINS, null, c15);
+
+        ContentValues c16 = new ContentValues();
+        c16.put(KEY_WK_CONTAINS, 2);
+        c16.put(KEY_EXER_CONTAINS, exerciseList.indexOf("High Knees"));
+        db.insert(TABLE_CONTAINS, null, c16);
+
+        ContentValues c17 = new ContentValues();
+        c17.put(KEY_WK_CONTAINS, 2);
+        c17.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Jumping Jacks"));
+        db.insert(TABLE_CONTAINS, null, c17);
+
+        ContentValues c18 = new ContentValues();
+        c18.put(KEY_WK_CONTAINS, 2);
+        c18.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Fast Feet Shuffle"));
+        db.insert(TABLE_CONTAINS, null, c18);
+
+        ContentValues c19 = new ContentValues();
+        c19.put(KEY_WK_CONTAINS, 2);
+        c19.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Long Jump with Jog"));
+        db.insert(TABLE_CONTAINS, null, c19);
+
+        ContentValues c20 = new ContentValues();
+        c20.put(KEY_WK_CONTAINS, 2);
+        c20.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Jumping Lunges"));
+        db.insert(TABLE_CONTAINS, null, c20);
+
+        ContentValues c21 = new ContentValues();
+        c21.put(KEY_WK_CONTAINS, 2);
+        c21.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Butt Kicks"));
+        db.insert(TABLE_CONTAINS, null, c21);
+
+        ContentValues c22 = new ContentValues();
+        c22.put(KEY_WK_CONTAINS, 2);
+        c22.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Bicycle"));
+        db.insert(TABLE_CONTAINS, null, c22);
+
+        ContentValues c23 = new ContentValues();
+        c23.put(KEY_WK_CONTAINS, 2);
+        c23.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Ab Crunches"));
+        db.insert(TABLE_CONTAINS, null, c23);
+
+        ContentValues c24 = new ContentValues();
+        c24.put(KEY_WK_CONTAINS, 3);
+        c24.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Bicycle"));
+        db.insert(TABLE_CONTAINS, null, c24);
+
+        ContentValues c25 = new ContentValues();
+        c25.put(KEY_WK_CONTAINS, 3);
+        c25.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Plank"));
+        db.insert(TABLE_CONTAINS, null, c25);
+
+        ContentValues c26 = new ContentValues();
+        c26.put(KEY_WK_CONTAINS, 3);
+        c26.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Leg Raises"));
+        db.insert(TABLE_CONTAINS, null, c26);
+
+        ContentValues c27 = new ContentValues();
+        c27.put(KEY_WK_CONTAINS, 3);
+        c27.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Wall Sit"));
+        db.insert(TABLE_CONTAINS, null, c27);
+
+        ContentValues c28 = new ContentValues();
+        c28.put(KEY_WK_CONTAINS, 3);
+        c28.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Cobra"));
+        db.insert(TABLE_CONTAINS, null, c28);
+
+        ContentValues c29 = new ContentValues();
+        c29.put(KEY_WK_CONTAINS, 4);
+        c29.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Touch the Sky"));
+        db.insert(TABLE_CONTAINS, null, c29);
+
+        ContentValues c30 = new ContentValues();
+        c30.put(KEY_WK_CONTAINS, 4);
+        c30.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Calf Stretch"));
+        db.insert(TABLE_CONTAINS, null, c30);
+
+        ContentValues c31 = new ContentValues();
+        c31.put(KEY_WK_CONTAINS, 4);
+        c31.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Runner Stretch"));
+        db.insert(TABLE_CONTAINS, null, c31);
+
+        ContentValues c32 = new ContentValues();
+        c32.put(KEY_WK_CONTAINS, 4);
+        c32.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Forward Hang"));
+        db.insert(TABLE_CONTAINS, null, c32);
+
+        ContentValues c33 = new ContentValues();
+        c33.put(KEY_WK_CONTAINS, 4);
+        c33.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Cobra"));
+        db.insert(TABLE_CONTAINS, null, c33);
+
+        ContentValues c34 = new ContentValues();
+        c34.put(KEY_WK_CONTAINS, 4);
+        c34.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Seated Back Twist"));
+        db.insert(TABLE_CONTAINS, null, c34);
+
+        ContentValues c35 = new ContentValues();
+        c35.put(KEY_WK_CONTAINS, 4);
+        c35.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Toe Touch"));
+        db.insert(TABLE_CONTAINS, null, c35);
+
+        ContentValues c36 = new ContentValues();
+        c36.put(KEY_WK_CONTAINS, 5);
+        c36.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Bicep Curls"));
+        db.insert(TABLE_CONTAINS, null, c36);
+
+        ContentValues c37 = new ContentValues();
+        c37.put(KEY_WK_CONTAINS, 5);
+        c37.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Dumbbell Squats"));
+        db.insert(TABLE_CONTAINS, null, c37);
+
+        ContentValues c38 = new ContentValues();
+        c38.put(KEY_WK_CONTAINS, 5);
+        c38.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Side Raises"));
+        db.insert(TABLE_CONTAINS, null, c38);
+
+        ContentValues c39 = new ContentValues();
+        c39.put(KEY_WK_CONTAINS, 5);
+        c39.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Shoulder Press"));
+        db.insert(TABLE_CONTAINS, null, c39);
+
+        ContentValues c40 = new ContentValues();
+        c40.put(KEY_WK_CONTAINS, 5);
+        c40.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Pushups"));
+        db.insert(TABLE_CONTAINS, null, c40);
+
+        ContentValues c41 = new ContentValues();
+        c41.put(KEY_WK_CONTAINS, 5);
+        c41.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Lateral Raises"));
+        db.insert(TABLE_CONTAINS, null, c41);
+
+
+    }
+
     public boolean checkInfo(String username, String password) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor resultset = db.rawQuery("SELECT " + KEY_USERNAME + " FROM " + TABLE_USER,
@@ -254,15 +553,9 @@ public class DBHandler extends SQLiteOpenHelper {
         while (resultset.moveToNext()) {
             String addition = resultset.getString(resultset.getColumnIndex(KEY_USERNAME));
             usernames.add(addition);
-
         }
-        if (usernames.contains(username)) {
-            rspass = db.rawQuery("SELECT " + KEY_PASSWORD + " FROM " + TABLE_USER + " WHERE "
-                    + KEY_USERNAME + " = " + username, null);
-            return rspass.getString(1).equals(password);
-        } else {
-            return userGetValOf(username, UserKey.PASSWORD).equals(password);
-        }
+        return usernames.contains(username) &&
+                userGetValOf(username, UserKey.PASSWORD).equals(password);
     }
 
     /*
