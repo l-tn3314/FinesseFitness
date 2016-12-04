@@ -58,7 +58,8 @@
             android:name=".ChooseWorkoutActivity"
             android:label="@string/title_activity_choose_workout" />
         <activity android:name=".DashboardActivity" />
-        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".AddWorkoutActivity"></activity>
     </application>
 
 </manifest>
