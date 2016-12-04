@@ -4,6 +4,56 @@
     <string name="app_name">FinesseFitness</string>
     <string name="menu">Menu</string>
 
+    <!-- list of workouts -->
+    <string-array name = "workout_array">
+        <item>Legs 4 Dayz</item>
+        <item>Kym K Booty Blaster</item>
+        <item>HIIT</item>
+        <item>Flabs to Abs</item>
+        <item>I Woke Up Like Dis</item>
+        <item>Armed and Ready</item>
+    </string-array>
+
+    <!-- pre-defined exercises -->
+    <string-array name="default_exercise_array">
+        <item>Squats</item>
+        <item>Jumping Jacks</item>
+        <item>Forward Lunges</item>
+        <item>Side Lunges</item>
+        <item>High Knees</item>
+        <item>Butt Kicks</item>
+        <item>Frog Jumps</item>
+        <item>Burpee Tuck Jumps</item>
+        <item>Power Skip</item>
+        <item>Squat Leg Raises</item>
+        <item>Ab Crunches</item>
+        <item>Bicycle</item>
+        <item>Plank</item>
+        <item>Wall Sit</item>
+        <item>Standing Calf Raises</item>
+        <item>Alternating Drop Lunges</item>
+        <item>Burpee Squats</item>
+        <item>Hip Lift Progression</item>
+        <item>Sumo Squat</item>
+        <item>Fast Feet Shuffle</item>
+        <item>Long Jump With Jog</item>
+        <item>Jumping Lunges</item>
+        <item>Leg Raises</item>
+        <item>Touch the Sky</item>
+        <item>Calf Stretch</item>
+        <item>Runner Stretch</item>
+        <item>Forward Hang</item>
+        <item>Cobra</item>
+        <item>Seat Back Twist</item>
+        <item>Toe-Touch</item>
+        <item>Bicep Curls</item>
+        <item>Dumbbell Squats</item>
+        <item>Side Raises</item>
+        <item>Shoulder Press</item>
+        <item>Pushups</item>
+        <item>Lateral Raises</item>
+    </string-array>
+
     <!-- sidebar items -->
     <string-array name="nav_array">
         <item>Dashboard</item>

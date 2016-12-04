@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -27,10 +29,13 @@ import com.spotify.sdk.android.player.SpotifyPlayer;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.VideoView;
 
 import java.io.Console;
 
 import databaseSchema.DBHandler;
+
+import static com.example.finessefitness.R.id.videoView;
 
 /*
 main screen - choosing level of difficulty for workout
@@ -65,6 +70,20 @@ public class DashboardActivity extends SidebarActivity implements
         user = (TextView) findViewById(R.id.textView13);
 
         displayDashboard();
+
+        /** Video Example */
+        VideoView mVideoView2 = (VideoView)findViewById(videoView);
+        String uriPath2 = "android.resource://" + getPackageName() + "/" + R.raw.example;
+        Uri uri2 = Uri.parse(uriPath2);
+        mVideoView2.setVideoURI(uri2);
+        mVideoView2.requestFocus();
+        mVideoView2.start();
+        mVideoView2.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mp.setLooping(true);
+            }
+        });
         /*
         //start logging on to spotify
         AuthenticationRequest.Builder builder = new AuthenticationRequest.Builder(CLIENT_ID,
