@@ -90,6 +90,10 @@ public abstract class SidebarActivity extends AppCompatActivity {
                 intent = new Intent(this, AddWorkoutActivity.class);
                 startActivity(intent);
                 break;
+            case "Custom Workouts":
+                intent = new Intent(this, CustomWorkoutActivity.class);
+                startActivity(intent);
+                break;
             case "Logout":
                 SharedPreferences shared = getSharedPreferences(MainActivity.PREF_NAME, Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = shared.edit();

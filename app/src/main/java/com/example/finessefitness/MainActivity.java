@@ -23,6 +23,8 @@ import com.spotify.sdk.android.player.SpotifyPlayer;
 
 import android.widget.EditText;
 
+import databaseSchema.DBHandler;
+
 /*
 main screen - choosing level of difficulty for workout
  */
@@ -36,7 +38,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        //DBHandler handler = DBHandler.getInstance(this);
+        //handler.onCreate(handler.getWritableDatabase());
+        //this.deleteDatabase("finesse_fitness");
         SharedPreferences shared = getSharedPreferences(MainActivity.PREF_NAME, Context.MODE_PRIVATE);
         if (shared.getBoolean(IS_LOGGED_IN, false)) {
             Intent intent = new Intent(this, DashboardActivity.class);
