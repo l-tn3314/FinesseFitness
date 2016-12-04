@@ -563,9 +563,9 @@ public class DBHandler extends SQLiteOpenHelper {
      */
     public String userGetValOf(String username, UserKey key) {
         SQLiteDatabase db = this.getReadableDatabase();
-        String[] projection = { key.toString() };
+        String[] projection = {key.toString()};
         String selection = KEY_USERNAME + " = ?";
-        String[] selectionArgs = { username };
+        String[] selectionArgs = {username};
         Cursor c = db.query(
                 TABLE_USER,
                 projection,
@@ -580,10 +580,31 @@ public class DBHandler extends SQLiteOpenHelper {
     }
 
     /*
+    Updates the User table with the given newVal for the UserKey of username
+    Returns true if more than one row is updated
+    */
+    public boolean userUpdateValOf(String username, UserKey key, String newVal) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues args = new ContentValues();
+        // if field to be modified is an int
+        if (key == UserKey.HEIGHT || key == UserKey.WEIGHT || key == UserKey.PHONE_NUMBER) {
+            if (newVal == null) {
+                args.put(key.toString(), (byte[]) null);
+            } else {
+                args.put(key.toString(), Integer.parseInt(newVal));
+            }
+        } else { // else String
+            args.put(key.toString(), newVal);
+        }
+        String[] userArg = {username};
+        return db.update(TABLE_USER, args, KEY_USERNAME + "=?", userArg) > 0;
+    }
+
+    /*
     Gets the given field from the Dashboard table for the given username
      */
     public String dashboardGetValOf(String username, DashboardKey key) {
-        String selectArg = userGetValOf(username, UserKey.DASHBOARD );
+        String selectArg = userGetValOf(username, UserKey.DASHBOARD);
         SQLiteDatabase db = this.getReadableDatabase();
         String[] projection = {key.toString()};
         String selection = KEY_DASH_ID + " = ?";
@@ -600,5 +621,18 @@ public class DBHandler extends SQLiteOpenHelper {
         c.moveToFirst();
 
         return c.getString(0);
+    }
+
+    /*
+    Updates the Dashboard table with the given newVal for the UserKey of username
+    Returns true if more than one row is updated
+    */
+    public boolean dashboardUpdateValOf(String username, DashboardKey key, String newVal) {
+        String selectArg = userGetValOf(username, UserKey.DASHBOARD);
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues args = new ContentValues();
+        args.put(key.toString(), newVal);
+        String[] userArg = {selectArg};
+        return db.update(TABLE_DASHBOARD, args, KEY_DASH_ID + "=?", userArg) > 0;
     }
 }

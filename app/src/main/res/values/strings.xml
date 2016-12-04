@@ -58,6 +58,7 @@
     <string-array name="nav_array">
         <item>Dashboard</item>
         <item>Choose Workout</item>
+        <item>Edit Profile</item>
         <item>Logout</item>
     </string-array>
     <string name="navigation_drawer_open">Open navigation drawer</string>

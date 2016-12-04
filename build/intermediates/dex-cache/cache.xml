@@ -20,6 +20,7 @@
         <dex dex="/Users/vugranamsreedhar/AndroidStudioProjects/FinesseFitness/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-safetynet-9.6.1_66196498d6ae25425b37dcb4a117ebde22c2cf17.jar" />
     </item>
     <item
+<<<<<<< HEAD
         is-multidex="false"
         jar="/Users/vugranamsreedhar/AndroidStudioProjects/FinesseFitness/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/9.6.1/jars/classes.jar"
         jumboMode="true"
@@ -657,15 +658,3 @@
         revision="24.0.0"
         sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
         <dex dex="/Users/vugranamsreedhar/AndroidStudioProjects/FinesseFitness/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-24.2.1_7b96df66507182b80330a788525715f20ef4365d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/vugranamsreedhar/AndroidStudioProjects/FinesseFitness/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
-        <dex dex="/Users/vugranamsreedhar/AndroidStudioProjects/FinesseFitness/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_7a9027523cbfa83fa913efe11c83a957f93c05b9.jar" />
-    </item>
-
-</items>
