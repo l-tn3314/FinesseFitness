@@ -69,7 +69,7 @@ public class DashboardActivity extends SidebarActivity implements
 
         displayDashboard();
 
-        /** Video Example */
+        /** Video Example
         VideoView mVideoView2 = (VideoView)findViewById(videoView);
         String uriPath2 = "android.resource://" + getPackageName() + "/" + R.raw.example;
         Uri uri2 = Uri.parse(uriPath2);
@@ -82,6 +82,7 @@ public class DashboardActivity extends SidebarActivity implements
                 mp.setLooping(true);
             }
         });
+         */
         /*
         //start logging on to spotify
         AuthenticationRequest.Builder builder = new AuthenticationRequest.Builder(CLIENT_ID,
