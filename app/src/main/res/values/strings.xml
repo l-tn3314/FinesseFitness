@@ -57,8 +57,9 @@
     <!-- sidebar items -->
     <string-array name="nav_array">
         <item>Dashboard</item>
-        <item>Choose Workout</item>
         <item>Edit Profile</item>
+        <item>Choose Workout</item>
+        <item>Add Workout</item>
         <item>Logout</item>
     </string-array>
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -85,4 +86,7 @@
     <!-- dashboard -->
     <string name="dashboard_goal"><i>Goal: </i></string>
     <string name="dashboard_workouts_completed"><i>Workouts Completed: </i></string>
+
+    <!-- add workout -->
+    <string name="add_exercise_list"><b>Exercises: </b></string>
 </resources>

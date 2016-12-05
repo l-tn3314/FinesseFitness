@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class ChooseWorkoutActivity extends SidebarActivity {
 
@@ -17,11 +18,10 @@ public class ChooseWorkoutActivity extends SidebarActivity {
         super.onCreate(savedInstanceState);
     }
 
-    /* called when the user selects a workout difficulty */
-    public void startWorkoutScreen(View view) {
-        Intent intent = new Intent(this, StartWorkoutActivity.class);
-        String buttonPressed = ((Button)view).getText().toString();
-        intent.putExtra("button pressed", buttonPressed);
+    public void WorkoutLevels(View view) {
+        Intent intent = new Intent(this, ActivityIntensity.class);
+        //String buttonPressed = ((ImageButton)view).getId().toString();
+        //intent.putExtra("button pressed", buttonPressed);
         startActivity(intent);
     }
 }

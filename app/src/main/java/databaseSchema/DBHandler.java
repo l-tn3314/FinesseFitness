@@ -76,6 +76,7 @@ public class DBHandler extends SQLiteOpenHelper {
     // Exercise Table Name
     private static final String TABLE_EXERCISE = "exercise";
 
+    private static int exercise_id = 1;
     // Exercise Table Column Names
     private static final String KEY_EXER_ID = "exercise_id"; // Primary Key
     private static final String KEY_EXER_NAME = "exercise_name";
@@ -188,6 +189,8 @@ public class DBHandler extends SQLiteOpenHelper {
         db.execSQL(CREATE_CONTAINS_TABLE);
         db.execSQL(CREATE_COMPLETES_TABLE);
 
+        addExercises();
+
         /* TODO:
         // Add trigger to add a dashboard when a new user is added
         db.execSQL("CREATE TRIGGER create_user_dashboard" +
@@ -213,6 +216,21 @@ public class DBHandler extends SQLiteOpenHelper {
 
         // Creating tables again
         this.onCreate(db);
+    }
+
+    public void addExercises() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        AppCompatActivity act = new MainActivity();
+        String[] exercises = act.getResources().getStringArray(R.array.default_exercise_array);
+        String description = "description";
+        for (int i = 0; i < exercises.length; i++) {
+            ContentValues values = new ContentValues();
+            values.put(KEY_EXER_ID, i);
+            values.put(KEY_EXER_NAME, exercises[i]);
+            values.put(KEY_DESCRIPTION, description);
+            db.insert(TABLE_EXERCISE, null, values);
+        }
+        exercise_id = exercises.length;
     }
 
     /*
@@ -255,27 +273,6 @@ public class DBHandler extends SQLiteOpenHelper {
         }
     }
 
-    /** Add prexisting exercises to the table  */
-    public void addExercises() {
-        SQLiteDatabase db = this.getWritableDatabase();
-        String[] exercises = {"Squats", "Jumping Jacks", "Forward Lunges",
-                "Side Lunges", "High Knees", "Butt Kicks", "Frog Jumps",
-                "Burpee Tuck Jumps", "Power Skip", "Squat Leg Raises",
-        "Ab Crunches", "Bicycle", "Plank", "Wall Sit", "Standing Calf Raises",
-                "Alternating Drop Lunges", "Burpee Squats", "Hip Lift Progression",
-                "Sumo Squat", "Fast Feet Shuffle", "Long Jump With Jog", "Jumping Lunges",
-        "Leg Raises", "Touch the Sky", "Calf Stretch", "Runner Stretch", "Forward Hang",
-        "Cobra", "Seat Back Twist", "Toe-Touch", "Bicep Curls", "Dumbbell Squats",
-                "Side Raises", "Shoulder Press", "Pushups", "Lateral Raises"};
-        String description = ""+R.raw.example;
-        for (int i = 0; i < exercises.length; i++) {
-            ContentValues values = new ContentValues();
-            values.put(KEY_EXER_ID, i);
-            values.put(KEY_EXER_NAME, exercises[i]);
-            values.put(KEY_DESCRIPTION, description);
-            db.insert(TABLE_EXERCISE, null, values);
-        }
-    }
 
     /** Add workouts to the database */
     public void addWorkouts() {

@@ -78,12 +78,16 @@ public abstract class SidebarActivity extends AppCompatActivity {
                 intent = new Intent(this, DashboardActivity.class);
                 startActivity(intent);
                 break;
+            case "Edit Profile":
+                intent = new Intent(this, ProfileActivity.class);
+                startActivity(intent);
+                break;
             case "Choose Workout":
                 intent = new Intent(this, ChooseWorkoutActivity.class);
                 startActivity(intent);
                 break;
-            case "Edit Profile":
-                intent = new Intent(this, ProfileActivity.class);
+            case "Add Workout":
+                intent = new Intent(this, AddWorkoutActivity.class);
                 startActivity(intent);
                 break;
             case "Logout":

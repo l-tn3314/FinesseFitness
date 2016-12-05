@@ -5,96 +5,127 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#5a0f9f"
     tools:context="com.example.finessefitness.MainActivity">
-
     <!-- main content -->
     <FrameLayout
         android:id="@+id/content_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <RelativeLayout
-            android:id="@+id/activity_choose_workout"
+            android:id="@+id/activity_main"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#8dcce9"
 
             android:paddingBottom="@dimen/activity_vertical_margin"
             android:paddingLeft="@dimen/activity_horizontal_margin"
             android:paddingRight="@dimen/activity_horizontal_margin"
             android:paddingTop="@dimen/activity_vertical_margin">
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"> <!--IMPORTANT otherwise backgrnd img. will not fill the whole screen -->
 
-            <!-- CHOOSE YOUR WORKOUT -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#8dcce9">
 
-            <!-- BEGINNER -->
-            <Button
-                android:id="@+id/beginnerButton"
-                android:layout_width="match_parent"
-                android:text="@string/button_beginner"
-                android:textSize="20sp"
-                android:layout_marginBottom="36dp"
-                android:onClick="startWorkoutScreen"
-                style="@android:style/Widget.Button"
-                android:layout_height="60dp"
-                android:layout_above="@+id/intermediateButton"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
-
-            <!-- INTERMEDIATE -->
-            <Button
-                android:id="@+id/intermediateButton"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:text="@string/button_intermediate"
-                android:textSize="20sp"
-                android:layout_marginBottom="36dp"
-                android:onClick="startWorkoutScreen"
-                style="@android:style/Widget.Button"
-                android:elevation="1dp"
-                android:layout_above="@+id/advancedButton"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
-
-            <!-- ADVANCED -->
-            <Button
-                android:id="@+id/advancedButton"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:text="@string/button_advanced"
-                android:textSize="20sp"
-                android:layout_marginBottom="55dp"
-                android:onClick="startWorkoutScreen"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                style="@android:style/Widget.Button" />
-
-            <TextView
-                android:id="@+id/textProfile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Choose your workout:"
-                android:layout_marginTop="21dp"
-                android:textColor="#FFFFFF"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:gravity="center"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:orientation="horizontal"
+            android:layout_weight="1" >
 
 
-        </RelativeLayout>
+            <ImageButton
+                android:id="@+id/legs"
+                android:background="#f476e7"
+                android:text="Legs 4 Dayz"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:onClick="WorkoutLevels"
+                android:layout_weight="1"
+                android:src="@drawable/legdayp"/>
 
-    </FrameLayout>
+            <ImageButton
+                android:id="@+id/kym"
+                android:background="#FFFFFF"
+                android:text="Kym"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:onClick="WorkoutLevels"
+                android:layout_weight="1"
+                android:src="@drawable/kymkp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:orientation="horizontal"
+            android:layout_weight="1" >
+
+            <ImageButton
+                android:id="@+id/hiit"
+                android:text="Hiit"
+                android:background="#f9c57d"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="WorkoutLevels"
+                android:src="@drawable/hiitp"/>
+
+            <ImageButton
+                android:id="@+id/abs"
+                android:background="#f4ed68"
+                android:text="Abs"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="WorkoutLevels"
+                android:src="@drawable/absp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:orientation="horizontal"
+            android:layout_weight="1" >
+
+            <ImageButton
+                android:id="@+id/wokeup"
+                android:background="#39e9c6"
+                android:text="WokeUp"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/yogap"/>
+
+            <ImageButton
+                android:id="@+id/arm"
+                android:background="#e7572c"
+                android:text="Arm"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/armp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+    </RelativeLayout>
+</FrameLayout>
 
     <!-- sidebar -->
-    <ListView
-        android:id="@+id/left_drawer"
-        android:layout_width="240dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:choiceMode="singleChoice"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="0dp"
-        android:background="#111">
-    </ListView>
-</android.support.v4.widget.DrawerLayout>
+<ListView
+android:id="@+id/left_drawer"
+android:layout_width="240dp"
+android:layout_height="match_parent"
+android:layout_gravity="start"
+android:choiceMode="singleChoice"
+android:divider="@android:color/transparent"
+android:dividerHeight="0dp"
+android:background="#111">
+</ListView>
+    </android.support.v4.widget.DrawerLayout>
