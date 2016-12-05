@@ -399,8 +399,9 @@ public class DBHandler extends SQLiteOpenHelper {
         Context context = App.getContext();
         String[] workouts = context.getResources().getStringArray(R.array.workout_array);
         String[] exercises = context.getResources().getStringArray(R.array.default_exercise_array);
-        List<String> exerciseList = Arrays.asList(exercises);
-        exerciseList.add(0, "");
+        List<String> exerciseList = new ArrayList<String>();//Arrays.asList(exercises);
+        exerciseList.add("");
+        exerciseList.addAll(Arrays.asList(exercises));
         ContentValues c0 = new ContentValues();
         c0.put(KEY_WK_CONTAINS, 1);
         c0.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Squats"));
@@ -413,7 +414,7 @@ public class DBHandler extends SQLiteOpenHelper {
 
         ContentValues c2 = new ContentValues();
         c2.put(KEY_WK_CONTAINS, 1);
-        c2.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Burpee Tuck Jump"));
+        c2.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Burpee Tuck Jumps"));
         db.insert(TABLE_CONTAINS, null, c2);
 
         ContentValues c3 = new ContentValues();
@@ -842,6 +843,7 @@ Returns true if more than one row is updated
         );
         db.endTransaction();
         c.moveToFirst();
+        System.out.println(exer_id);
         String ans = c.getString(0);
         //this.close();
         return ans;
