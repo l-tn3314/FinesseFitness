@@ -5,7 +5,7 @@
     <string name="menu">Menu</string>
 
     <!-- list of workouts -->
-    <string-array name = "workout_array">
+    <string-array name="workout_array">
         <item>Legs 4 Dayz</item>
         <item>Kym K Booty Blaster</item>
         <item>HIIT</item>
@@ -60,6 +60,7 @@
         <item>Edit Profile</item>
         <item>Choose Workout</item>
         <item>Add Workout</item>
+        <item>Custom Workouts</item>
         <item>Logout</item>
     </string-array>
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -88,5 +89,8 @@
     <string name="dashboard_workouts_completed"><i>Workouts Completed: </i></string>
 
     <!-- add workout -->
-    <string name="add_exercise_list"><b>Exercises: </b></string>
+    <string name="custom_name_of_workout"><b>Name of Workout </b></string>
+
+    <!-- custom workouts -->
+    <string name="choose_workout"><i>Choose Workout</i></string>
 </resources>
