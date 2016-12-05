@@ -33,7 +33,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:textSize="18sp"
-                android:textColor="?android:attr/textColorHighlightInverse" />
+                android:textColor="@color/colorAccent" />
 
             <TextView
                 android:id="@+id/text_custom_workout"
@@ -59,13 +59,19 @@
                 android:id="@+id/scroll_wrap"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="60dp">
+                android:layout_below="@+id/custom_workout_spinner"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="12dp">
+
                 <ScrollView
                     android:id="@+id/scroll"
-                    xmlns:android="http://schemas.android.com/apk/res/android"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:fillViewport="true"> <!--IMPORTANT otherwise backgrnd img. will not fill the whole screen -->
+                    android:fillViewport="true"
+                    android:layout_alignTop="@+id/scroll_wrap"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"> <!--IMPORTANT otherwise backgrnd img. will not fill the whole screen -->
 
                     <TextView
                         android:id="@+id/custom_exercise_list"
@@ -74,12 +80,37 @@
                         android:layout_alignParentTop="true"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
-                        android:layout_marginTop="20dp"
                         android:textSize="18dp"
                         android:textColor="@color/colorPrimary" />
 
                 </ScrollView>
+
             </LinearLayout>
+
+            <Button
+                android:id="@+id/delete_workout"
+                android:text="Delete Workout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:onClick="deleteWorkout"
+                style="@android:style/Widget.Holo.Button"
+                android:background="@android:color/holo_red_dark"
+                android:layout_above="@+id/selected_workout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:id="@+id/selected_workout"
+                android:text="Choose this workout!"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="13dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                style="@android:style/Widget.Holo.Button"
+                android:background="@android:color/holo_green_dark" />
 
         </RelativeLayout>
 

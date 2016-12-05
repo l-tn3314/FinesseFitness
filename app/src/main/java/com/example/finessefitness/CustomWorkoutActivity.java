@@ -29,12 +29,44 @@ public class CustomWorkoutActivity extends SidebarActivity  implements AdapterVi
         shared = getSharedPreferences(MainActivity.PREF_NAME, Context.MODE_PRIVATE);
         username = shared.getString(MainActivity.USER, "");
 
+        updateSpinner();
+
+        // set height for scrollable (wrapped in linear layout)
+        int height = this.getResources().getDisplayMetrics().heightPixels;
+        LinearLayout wrap = (LinearLayout) findViewById(R.id.scroll_wrap);
+        ViewGroup.LayoutParams params = wrap.getLayoutParams();
+        params.height = height / 3;
+        wrap.setLayoutParams(params);
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view,
+                               int pos, long id) {
+        String selection = (String) parent.getItemAtPosition(pos);
+        TextView spinnerText = (TextView) findViewById(R.id.text_custom_workout);
+        spinnerText.setText(selection);
+
+        DBHandler handler = DBHandler.getInstance(this);
+        TextView exerciseList = (TextView) findViewById(R.id.custom_exercise_list);
+        exerciseList.setText("");
+        List<String> exercises = handler.getExercisesForWorkout(selection, username);
+        for (String s : exercises) {
+            exerciseList.append("\n" + s);
+        }
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
+
+    // updates the spinner
+    private void updateSpinner() {
         DBHandler handler = DBHandler.getInstance(this);
         List<String> lis = handler.workoutGetValOf(username, DBHandler.WorkoutKey.WORKOUT_NAME);
         String[] customWorkoutsArr = new String[lis.size()];
         int counter = 0;
         for (String s : lis) {
-            System.out.println(s);
             customWorkoutsArr[counter] = s;
             counter++;
         }
@@ -51,29 +83,17 @@ public class CustomWorkoutActivity extends SidebarActivity  implements AdapterVi
         spinner.setOnItemSelectedListener(this);
 
         spinner.setSelection(0);
-
-        // set height for scrollable (wrapped in linear layout)
-        int height = this.getResources().getDisplayMetrics().heightPixels;
-        LinearLayout wrap = (LinearLayout) findViewById(R.id.scroll_wrap);
-        ViewGroup.LayoutParams params = wrap.getLayoutParams();
-        params.height = (3 * height) / 4;
-        wrap.setLayoutParams(params);
     }
 
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view,
-                               int pos, long id) {
-        String selection = (String) parent.getItemAtPosition(pos);
+    /*
+    Deletes the currently selected workout
+     */
+    public void deleteWorkout(View view) {
         TextView spinnerText = (TextView) findViewById(R.id.text_custom_workout);
-        spinnerText.setText(selection);
-
+        String selected = spinnerText.getText().toString();
         DBHandler handler = DBHandler.getInstance(this);
+        handler.deleteWorkout(selected, username);
 
-        TextView exerciseList = (TextView) findViewById(R.id.custom_exercise_list);
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
+        updateSpinner();
     }
 }

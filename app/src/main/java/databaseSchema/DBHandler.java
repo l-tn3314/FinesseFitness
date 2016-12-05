@@ -305,8 +305,6 @@ public class DBHandler extends SQLiteOpenHelper {
         while (c.moveToNext()) {
             ans = Integer.parseInt(c.getString(0));
         }
-        System.out.println("dash id");
-        System.out.println(ans);
         return ans;
     }
 
@@ -746,14 +744,14 @@ public class DBHandler extends SQLiteOpenHelper {
         db.setTransactionSuccessful();
         db.endTransaction();
         //this.close();
-        List<String> ans = workoutGetValOf(user_created, WorkoutKey.WORKOUT_ID);
-        return Integer.parseInt(ans.get(0));
+        LinkedList<String> ans = workoutGetValOf(user_created, WorkoutKey.WORKOUT_ID);
+        return Integer.parseInt(ans.getLast());
     }
 
     /*
     Gets the given field from the Workout table for the given user name
      */
-    public List<String> workoutGetValOf(String username, WorkoutKey key) {
+    public LinkedList<String> workoutGetValOf(String username, WorkoutKey key) {
         //SQLiteDatabase db = this.getReadableDatabase();
         db.beginTransaction();
         String[] projection = {key.toString()};
@@ -806,6 +804,31 @@ public class DBHandler extends SQLiteOpenHelper {
     }
 
     /*
+    Gets the given field from the Exercise table for the given exercise id
+     */
+    public String exerciseGetValOf(int exer_id, ExerciseKey key) {
+        //SQLiteDatabase db = this.getReadableDatabase();
+        db.beginTransaction();
+        String[] projection = {key.toString()};
+        String selection = KEY_EXER_ID + " = ?";
+        String[] selectionArgs = {Integer.toString(exer_id)};
+        Cursor c = db.query(
+                TABLE_EXERCISE,
+                projection,
+                selection,
+                selectionArgs,
+                null,
+                null,
+                null
+        );
+        db.endTransaction();
+        c.moveToFirst();
+        String ans = c.getString(0);
+        //this.close();
+        return ans;
+    }
+
+    /*
     Inserts to the Contains table
     */
     public boolean insertToContainsTable(int workout_id, int exercise_id) {
@@ -819,5 +842,77 @@ public class DBHandler extends SQLiteOpenHelper {
         db.endTransaction();
         //this.close();
         return insert > -1;
+    }
+
+    /*
+    Returns the list of exercises of the chosen workout for the given user
+     */
+    public List<String> getExercisesForWorkout(String workout_name, String username) {
+        db.beginTransaction();
+        List<String> exercises = new LinkedList<String>();
+        // find the workout_id
+        String[] projection = {WorkoutKey.WORKOUT_ID.toString()};
+        String selection = KEY_WK_NAME + " = ? AND " + KEY_USER_CREATED + " = ?";
+        String[] selectionArgs = {workout_name, username};
+        Cursor c = db.query(
+                TABLE_WORKOUT,
+                projection,
+                selection,
+                selectionArgs,
+                null,
+                null,
+                null
+        );
+        c.moveToFirst();
+        String workout_id = c.getString(0);
+        String[] projection2 = {KEY_EXER_CONTAINS};
+        String selection2 = KEY_WK_CONTAINS + " = ?";
+        String[] selectionArgs2 = {workout_id};
+        Cursor c2 = db.query(
+                TABLE_CONTAINS,
+                projection2,
+                selection2,
+                selectionArgs2,
+                null,
+                null,
+                null
+        );
+        if (c2.moveToFirst()) {
+            int exer_id = Integer.parseInt(c2.getString(0));
+            exercises.add(exerciseGetValOf(exer_id, ExerciseKey.EXER_NAME));
+        }
+        while (c2.moveToNext()) {
+            int exer_id = Integer.parseInt(c2.getString(0));
+            exercises.add(exerciseGetValOf(exer_id, ExerciseKey.EXER_NAME));
+        }
+        db.endTransaction();
+        return exercises;
+    }
+
+    /*
+    Deletes the given workout for the given user
+     */
+    public boolean deleteWorkout(String workout_name, String username) {
+        db.beginTransaction();
+        String[] projection = {WorkoutKey.WORKOUT_ID.toString()};
+        String selection = KEY_WK_NAME + " = ? AND " + KEY_USER_CREATED + " = ?";
+        String[] selectionArgs = {workout_name, username};
+        Cursor c = db.query(
+                TABLE_WORKOUT,
+                projection,
+                selection,
+                selectionArgs,
+                null,
+                null,
+                null
+        );
+        c.moveToFirst();
+        String workout_id = c.getString(0);
+        String where = KEY_WK_ID + " = ?";
+        String[] whereArgs = {workout_id};
+        int del =  db.delete(TABLE_WORKOUT, where, whereArgs);
+        db.setTransactionSuccessful();
+        db.endTransaction();
+        return del > 0;
     }
 }
