@@ -35,7 +35,6 @@ import java.io.Console;
 
 import databaseSchema.DBHandler;
 
-import static com.example.finessefitness.R.id.videoView;
 
 /*
 main screen - choosing level of difficulty for workout

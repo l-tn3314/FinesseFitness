@@ -730,6 +730,24 @@ public class DBHandler extends SQLiteOpenHelper {
     }
 
     /*
+Updates the Dashboard table with the given newVal for the UserKey of username
+Returns true if more than one row is updated
+*/
+    public boolean dashboardUpdateValOf(String username, DashboardKey key, int newVal) {
+        String selectArg = userGetValOf(username, UserKey.DASHBOARD);
+        //SQLiteDatabase db = this.getWritableDatabase();
+        db.beginTransaction();
+        ContentValues args = new ContentValues();
+        args.put(key.toString(), newVal);
+        String[] userArg = {selectArg};
+        int update = db.update(TABLE_DASHBOARD, args, KEY_DASH_ID + "=?", userArg);
+        db.setTransactionSuccessful();
+        db.endTransaction();
+        //this.close();
+        return update > 0;
+    }
+
+    /*
     inserts a new workout to the Workouts table
     Returns the id of the workout inserted
      */
