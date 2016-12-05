@@ -61,17 +61,6 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse" />
 
             <TextView
-                android:id="@+id/textView13"
-                android:text="User"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/text_workouts_completed"
-                android:layout_alignRight="@+id/text_workouts_completed"
-                android:layout_alignEnd="@+id/text_workouts_completed"
-                android:layout_marginTop="115dp"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse" />
-
-            <TextView
                 android:id="@+id/goal"
                 android:text="goal_here"
                 android:layout_width="wrap_content"

@@ -46,7 +46,6 @@ public class DashboardActivity extends SidebarActivity implements
 
     private TextView goal;
     private TextView workouts_completed;
-    private TextView user;
 
     private SharedPreferences shared;
     private String username; // current user
@@ -67,7 +66,6 @@ public class DashboardActivity extends SidebarActivity implements
 
         goal = (TextView) findViewById(R.id.goal);
         workouts_completed = (TextView) findViewById(R.id.workouts_completed);
-        user = (TextView) findViewById(R.id.textView13);
 
         displayDashboard();
 
@@ -100,7 +98,6 @@ public class DashboardActivity extends SidebarActivity implements
         DBHandler handler = DBHandler.getInstance(this);
         goal.setText(handler.dashboardGetValOf(username, DBHandler.DashboardKey.WORKOUT_GOAL));
         workouts_completed.setText(handler.dashboardGetValOf(username, DBHandler.DashboardKey.WORKOUTS_COMPLETED));
-        user.setText(username);
     }
 
     @Override
