@@ -400,6 +400,7 @@ public class DBHandler extends SQLiteOpenHelper {
         String[] workouts = context.getResources().getStringArray(R.array.workout_array);
         String[] exercises = context.getResources().getStringArray(R.array.default_exercise_array);
         List<String> exerciseList = Arrays.asList(exercises);
+        exerciseList.add(0, "");
         ContentValues c0 = new ContentValues();
         c0.put(KEY_WK_CONTAINS, 1);
         c0.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Squats"));
@@ -457,7 +458,7 @@ public class DBHandler extends SQLiteOpenHelper {
 
         ContentValues c11 = new ContentValues();
         c11.put(KEY_WK_CONTAINS, 2);
-        c11.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Burpee Squat"));
+        c11.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Burpee Squats"));
         db.insert(TABLE_CONTAINS, null, c11);
 
         ContentValues c12 = new ContentValues();
@@ -497,7 +498,7 @@ public class DBHandler extends SQLiteOpenHelper {
 
         ContentValues c19 = new ContentValues();
         c19.put(KEY_WK_CONTAINS, 3);
-        c19.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Long Jump with Jog"));
+        c19.put(KEY_EXER_CONTAINS, exerciseList.indexOf("Long Jump With Jog"));
         db.insert(TABLE_CONTAINS, null, c19);
 
         ContentValues c20 = new ContentValues();
