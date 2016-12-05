@@ -5,7 +5,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#5a0f9f"
+    android:background="#48bcb8"
     tools:context="com.example.finessefitness.StartWorkoutActivity">
 
     <!-- main content -->
