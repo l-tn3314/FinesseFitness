@@ -53,6 +53,7 @@ public class StartWorkoutActivity extends SidebarActivity {
         // text for details (exercises) of workout
         TextView workoutDetails = (TextView)findViewById(R.id.exercise_list);
         DBHandler db = DBHandler.getInstance(this);
+        System.out.println(this.workoutName);
         List<String> exercises = db.getExercisesForWorkout(this.workoutName, user);
         // re-initialize static variables
         workoutExercises = exercises;
