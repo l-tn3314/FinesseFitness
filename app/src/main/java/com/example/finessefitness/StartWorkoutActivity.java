@@ -17,8 +17,10 @@ import android.widget.TableLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
+import databaseSchema.DBHandler;
 import hard_code.Workouts;
 
 /*
@@ -49,12 +51,13 @@ public class StartWorkoutActivity extends SidebarActivity {
         }
         workoutLevel.setText(this.buttonPressed);
 
-
         // text for details (exercises) of workout
         TextView workoutDetails = new TextView(this);
-        String[] exercises = Workouts.exercises; // array of all possible exercises
+        DBHandler db = DBHandler.getInstance(this);
+        //List<String> exercises = db.getExercisesForWorkout(this.buttonPressed, "FinesseFitness");
+        //String[] exercises = Workouts.exercises; // array of all possible exercises
         String workoutCol1 = ""; // first column of exercises
-        String workoutCol2 = ""; // second column of exercises
+        //String workoutCol2 = ""; // second column of exercises
         Random r = new Random();
         boolean inWorkoutCol2 = false; // goes in col 2?
         int ind;
@@ -63,6 +66,11 @@ public class StartWorkoutActivity extends SidebarActivity {
         workoutExercises = new ArrayList<String>();
         exerciseSeconds = new ArrayList<Integer>();
 
+       // for (int i = 0; i < exercises.size(); i++) {
+         //   workoutCol1 += exercises.get(i);
+        //}
+
+        /**
         // three cases: beginner, intermediate, advanced
         switch(this.buttonPressed) {
             // beginner is 1 column
@@ -153,6 +161,7 @@ public class StartWorkoutActivity extends SidebarActivity {
             default:
                 break;
         }
+         */
         workoutDetails.setTextSize(17);
         workoutDetails.setTextColor(Color.parseColor("#FFFFFF"));
         workoutDetails.setText(workoutCol1);
@@ -161,7 +170,7 @@ public class StartWorkoutActivity extends SidebarActivity {
 
         TextView workoutDetails2 = new TextView(this);
         workoutDetails2.setTextSize(17);
-        workoutDetails2.setText(workoutCol2);
+        //workoutDetails2.setText(workoutCol2);
         workoutDetails2.setTextColor(Color.parseColor("#FFFFFF"));
         // place col 2 view below the workout level and to the right of col 1
         RelativeLayout.LayoutParams params2;
@@ -174,6 +183,7 @@ public class StartWorkoutActivity extends SidebarActivity {
 
         // back arrow
        // getSupportActionBar().setHomeButtonEnabled(true);
+
     }
 
     /* called when the user starts a workout */

@@ -2,12 +2,13 @@ package com.example.finessefitness;
 
 import android.app.Application;
 import android.content.Context;
+import android.support.multidex.MultiDexApplication;
 
 /**
  * Created by tnl11 on 12/4/2016.
  */
 
-public class App extends Application {
+public class App extends MultiDexApplication{
     private static Context context;
 
     @Override

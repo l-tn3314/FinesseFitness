@@ -42,20 +42,20 @@
             <ImageButton
                 android:id="@+id/legs"
                 android:background="#f476e7"
-                android:text="Legs 4 Dayz"
                 android:layout_width="0dip"
                 android:layout_height="match_parent"
                 android:onClick="WorkoutLevels"
+                android:tag = "Legs 4 Dayz"
                 android:layout_weight="1"
                 android:src="@drawable/legdayp"/>
 
             <ImageButton
                 android:id="@+id/kym"
                 android:background="#FFFFFF"
-                android:text="Kym"
                 android:layout_width="0dip"
                 android:layout_height="match_parent"
                 android:onClick="WorkoutLevels"
+                android:tag = "Kym K Booty Blaster"
                 android:layout_weight="1"
                 android:src="@drawable/kymkp" />
 
@@ -69,12 +69,12 @@
 
             <ImageButton
                 android:id="@+id/hiit"
-                android:text="Hiit"
                 android:background="#f9c57d"
                 android:layout_width="0dip"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="WorkoutLevels"
+                android:tag = "HIIT"
                 android:src="@drawable/hiitp"/>
 
             <ImageButton
@@ -85,6 +85,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="WorkoutLevels"
+                android:tag = "Flabs to Abs"
                 android:src="@drawable/absp"/>
         </LinearLayout>
 
@@ -97,18 +98,20 @@
             <ImageButton
                 android:id="@+id/wokeup"
                 android:background="#39e9c6"
-                android:text="WokeUp"
                 android:layout_width="0dip"
                 android:layout_height="match_parent"
+                android:onClick="WorkoutLevels"
+                android:tag = "I Woke Up Like Dis"
                 android:layout_weight="1"
                 android:src="@drawable/yogap"/>
 
             <ImageButton
                 android:id="@+id/arm"
                 android:background="#e7572c"
-                android:text="Arm"
                 android:layout_width="0dip"
                 android:layout_height="match_parent"
+                android:onClick="WorkoutLevels"
+                android:tag = "Armed and Ready"
                 android:layout_weight="1"
                 android:src="@drawable/armp"/>
         </LinearLayout>
