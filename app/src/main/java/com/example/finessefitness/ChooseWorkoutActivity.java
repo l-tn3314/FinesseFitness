@@ -20,8 +20,9 @@ public class ChooseWorkoutActivity extends SidebarActivity {
 
     public void WorkoutLevels(View view) {
         Intent intent = new Intent(this, StartWorkoutActivity.class);
-        String buttonPressed = ((ImageButton)view).getTag().toString();
-        intent.putExtra("button pressed", buttonPressed);
+        String workoutName = ((ImageButton)view).getTag().toString();
+        intent.putExtra("workout name", workoutName);
+        intent.putExtra("user created", "FinesseFitness");
         startActivity(intent);
     }
 }

@@ -1,6 +1,7 @@
 package com.example.finessefitness;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -95,5 +96,18 @@ public class CustomWorkoutActivity extends SidebarActivity  implements AdapterVi
         handler.deleteWorkout(selected, username);
 
         updateSpinner();
+    }
+
+    /*
+    Chooses the currently selected workout
+     */
+    public void chooseWorkout(View view) {
+        TextView spinnerText = (TextView) findViewById(R.id.text_custom_workout);
+        String selected = spinnerText.getText().toString();
+        Intent intent = new Intent(this, StartWorkoutActivity.class);
+        intent.putExtra("workout name", selected);
+        intent.putExtra("user created", username);
+        startActivity(intent);
+
     }
 }
