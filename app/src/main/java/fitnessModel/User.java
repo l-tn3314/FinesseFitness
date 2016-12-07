@@ -8,7 +8,7 @@ public class User {
     public String password;
     public String email;
     public long phoneNumber;
-    public int weight;
-    public int height;
+    public Integer weight;
+    public Integer height;
 
 }

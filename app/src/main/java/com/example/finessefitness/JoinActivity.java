@@ -35,43 +35,70 @@ public class JoinActivity extends AppCompatActivity {
         EditText eEmail = (EditText) findViewById(R.id.email);
         EditText ePhone = (EditText) findViewById(R.id.phone_number);
 
+        boolean valid = true;
+
         if (eFirstName.length() == 0 ) {
+            valid = false;
             eFirstName.requestFocus();
             eFirstName.setError("Field cannot be empty");
         }
         if (!(eFirstName.getText().toString().matches("[a-zA-Z ]+"))) {
+            valid = false;
             eFirstName.requestFocus();
             eFirstName.setError("Enter only alphabetical characters");
         }
 
         if (eLastName.length() == 0) {
+            valid = false;
             eLastName.requestFocus();
             eLastName.setError("Field cannot be empty");
         }
 
         if (!(eLastName.getText().toString().matches("[a-zA-Z ]+"))) {
+            valid = false;
             eLastName.requestFocus();
             eLastName.setError("Enter only alphabetical characters");
         }
 
         if (eUserName.length() == 0) {
+            valid = false;
             eUserName.requestFocus();
             eUserName.setError("Field cannot be empty");
         }
+        else {
+            String s = "";
+            try {
+                // checks for unique username
+                DBHandler handler = DBHandler.getInstance(this);
+                s = handler.userGetValOf(eUserName.getText().toString(), DBHandler.UserKey.USERNAME);
+            } catch (Exception e) {
+                // ok - username does not exist
+            }
+            //System.out.println(s);
+            if (!s.equals("")) {
+                eUserName.requestFocus();
+                eUserName.setError("Username already taken!");
+                valid = false;
+            }
+        }
+
         if (ePassword.length() == 0) {
             ePassword.requestFocus();
             ePassword.setError("Field cannot be empty");
+            valid = false;
         }
         if (eEmail.length() == 0) {
             eEmail.requestFocus();
             eEmail.setError("Field cannot be empty");
+            valid = false;
         }
         if (ePhone.length() == 0) {
             ePhone.requestFocus();
             ePhone.setError("Field cannot be empty");
+            valid = false;
         }
 
-        else {
+        if (valid) {
             user.firstName = eFirstName.getText().toString();
 
             user.lastName = eLastName.getText().toString();
@@ -85,11 +112,18 @@ public class JoinActivity extends AppCompatActivity {
             user.phoneNumber = Integer.parseInt(ePhone.getText().toString());
 
             EditText eHeight = (EditText) findViewById(R.id.height);
-            user.height = Integer.parseInt(eHeight.getText().toString());
+            try {
+                user.height = Integer.parseInt(eHeight.getText().toString());
+            } catch(Exception e) {
+                user.height = null;
+            }
 
             EditText eWeight = (EditText) findViewById(R.id.weight);
-            user.weight = Integer.parseInt(eWeight.getText().toString());
-
+            try {
+                user.weight = Integer.parseInt(eWeight.getText().toString());
+            } catch(Exception e) {
+                user.weight = null;
+            }
             // Gets the instance from the database
             DBHandler db = DBHandler.getInstance(this);
             db.addUser(user);

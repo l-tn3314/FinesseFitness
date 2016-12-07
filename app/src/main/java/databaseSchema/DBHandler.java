@@ -283,31 +283,6 @@ public class DBHandler extends SQLiteOpenHelper {
         db.endTransaction();
     }
 
-    // returns the highest dashboard id
-    private int getHighestDashId() {
-        //SQLiteDatabase db = this.getReadableDatabase();
-        db.beginTransaction();
-        String[] projection = {KEY_DASH_ID};
-        Cursor c = db.query(
-                TABLE_USER,
-                projection,
-                null,
-                null,
-                null,
-                null,
-                null
-        );
-        db.endTransaction();
-        int ans = 0;
-        if (c.moveToFirst()) {
-            ans = Integer.parseInt(c.getString(0));
-        }
-        while (c.moveToNext()) {
-            ans = Integer.parseInt(c.getString(0));
-        }
-        return ans;
-    }
-
     /*
     Adds the given user to the User table, and a dashboard for the user in the Dashboard table
      */
@@ -638,6 +613,7 @@ public class DBHandler extends SQLiteOpenHelper {
 
     /*
     Gets the given field from the User table for the given username
+    @throws IllegalArgumentException if given username does not exist in the database
      */
     public String userGetValOf(String username, UserKey key) {
         //SQLiteDatabase db = this.getReadableDatabase();
@@ -656,7 +632,13 @@ public class DBHandler extends SQLiteOpenHelper {
         );
         db.endTransaction();
         c.moveToFirst();
-        String ans = c.getString(0);
+        String ans = "";
+        try {
+            ans = c.getString(0);
+        } catch(Exception e) {
+            e.printStackTrace();
+            throw new IllegalArgumentException("User does not exist!");
+        }
         //this.close();
         return ans;
     }
@@ -689,6 +671,7 @@ public class DBHandler extends SQLiteOpenHelper {
 
     /*
     Gets the given field from the Dashboard table for the given username
+    @throws IllegalArgumentException if given username does not exist in the database
      */
     public String dashboardGetValOf(String username, DashboardKey key) {
         String selectArg = userGetValOf(username, UserKey.DASHBOARD);
@@ -708,7 +691,13 @@ public class DBHandler extends SQLiteOpenHelper {
         );
         db.endTransaction();
         c.moveToFirst();
-        String ans = c.getString(0);
+        String ans = "";
+        try {
+            ans = c.getString(0);
+        } catch(Exception e) {
+            e.printStackTrace();
+            throw new IllegalArgumentException("User does not exist!");
+        }
         //this.close();
         return ans;
     }
@@ -800,6 +789,7 @@ Returns true if more than one row is updated
 
     /*
     Gets the given field from the Exercise table for the given exercise name
+    @throws IllegalArgumentException if exer_name does not exist in the database
      */
     public String exerciseGetValOf(String exer_name, ExerciseKey key) {
         //SQLiteDatabase db = this.getReadableDatabase();
@@ -818,13 +808,20 @@ Returns true if more than one row is updated
         );
         db.endTransaction();
         c.moveToFirst();
-        String ans = c.getString(0);
+        String ans = "";
+        try {
+            ans = c.getString(0);
+        } catch(Exception e) {
+            e.printStackTrace();
+            throw new IllegalArgumentException("Exercise does not exist!");
+        }
         //this.close();
         return ans;
     }
 
     /*
     Gets the given field from the Exercise table for the given exercise id
+    @throws IllegalArgumentException if exer_id does not exist in the database
      */
     public String exerciseGetValOf(int exer_id, ExerciseKey key) {
         //SQLiteDatabase db = this.getReadableDatabase();
@@ -843,8 +840,13 @@ Returns true if more than one row is updated
         );
         db.endTransaction();
         c.moveToFirst();
-        System.out.println(exer_id);
-        String ans = c.getString(0);
+        String ans = "";
+        try {
+            ans = c.getString(0);
+        } catch(Exception e) {
+            e.printStackTrace();
+            throw new IllegalArgumentException("User does not exist!");
+        }
         //this.close();
         return ans;
     }
@@ -928,7 +930,13 @@ Returns true if more than one row is updated
                 null
         );
         c.moveToFirst();
-        String workout_id = c.getString(0);
+        String workout_id = "";
+        try {
+            workout_id = c.getString(0);
+        } catch(Exception e) {
+            e.printStackTrace();
+            throw new IllegalArgumentException("User and workout pairing does not exist!");
+        }
         String where = KEY_WK_ID + " = ?";
         String[] whereArgs = {workout_id};
         int del =  db.delete(TABLE_WORKOUT, where, whereArgs);
