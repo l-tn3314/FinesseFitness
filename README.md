@@ -1,6 +1,9 @@
 # FinesseFitness
 Are you sick and tired of doing the boring workout videos at home? Do you want some variety in your routine? FinesseFitness is your go to workout app. Users can choose from our 6 preset workouts or create their own personalized workouts.
 
+<i> Choose Workout Screen </i>
+<img src="https://github.com/l-tn3314/FinesseFitness/blob/master/choose_workout.png" height="350" width = "200">
+
 ## Front End Description
 ### CRUD operations
 - Create: Users can create an account on FinesseFitness and enter their information like name, age, phone number, email, height, and weight. Users can also create their own personalized workout routines to store in our database using our preexisting exercises
